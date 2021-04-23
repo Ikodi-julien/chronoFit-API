@@ -1,0 +1,16 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 700px;
+  margin: auto
+}
+
+th,
+td {
+  border-collapse: collapse;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, .2);
+}
