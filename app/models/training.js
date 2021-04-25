@@ -9,7 +9,7 @@ Model.init({
   isBenchmark: DataTypes.BOOLEAN,
 }, {
   sequelize,
-  tableName: "training"
+  tableName: 'training'
 })
 
 module.exports = Training;

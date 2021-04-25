@@ -31,37 +31,37 @@ Exercice.belongsToMany(Training, {
 });
 
 User.hasMany(Training, {
-  as: 'created_trainings',
-  foreignKey: 'author_id'
+  as: 'trainings_created',
+  foreignKey: 'creator_id'
 });
 
 Training.belongsTo(User, {
   as: 'creator',
-  foreignKey: 'author_id'
+  foreignKey: 'creator_id'
 });
 
 Training.belongsToMany(User, {
   as: 'done_by',
-  through: 'user_do_training',
+  through: 'user_has_training',
   foreignKey: 'training_id',
   otherKey: 'user_id'
 })
 
 User.belongsToMany(Training, {
   as: 'trainings',
-  through: 'user_do_training',
+  through: 'user_has_training',
   foreignKey: 'user_id',
   otherKey: 'training_id'
 })
 
 Training.hasMany(TrainingDone, {
   as: 'trainings_done',
-  foreignKey: 'training_id'
+  foreignKey: 'training_origin_id'
 });
 
 TrainingDone.belongsTo(Training, {
   as: 'training_origin',
-  foreign_key: 'training_id'
+  foreign_key: 'training_origin_id'
 });
 
 Role.hasMany(User, {

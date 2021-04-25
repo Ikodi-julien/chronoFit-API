@@ -8,7 +8,7 @@ Role.init({
   
 }, {
   sequelize,
-  tableName: "role"
+  tableName: 'role'
 })
 
 module.exports = Role;

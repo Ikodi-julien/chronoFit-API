@@ -8,7 +8,7 @@ Category.init({
   
 }, {
   sequelize,
-  tableName: "category"
+  tableName: 'category'
 })
 
 module.exports = Category;

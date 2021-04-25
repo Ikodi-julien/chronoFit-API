@@ -6,8 +6,8 @@ CREATE TABLE "category" (
   -- on utilise le nouveau type qui est un standart SQL alors que SERIAL est un pseudo-type de PG
   "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "name" TEXT NOT NULL DEFAULT '',
-  "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  "updated_at" TIMESTAMPTZ
+  "created_at" TIMESTAMP DEFAULT NOW(),
+  "updated_at" TIMESTAMP
 );
 
 CREATE TABLE "training" (
@@ -15,7 +15,7 @@ CREATE TABLE "training" (
   "name" TEXT NOT NULL DEFAULT '',
   "exo_list" json,
   "is_benchmark" boolean DEFAULT false,
-  "author_id" integer NOT NULL,
+  "creator_id" integer NOT NULL,
   "category_id" integer,
   "created_at" TIMESTAMP DEFAULT NOW(),
   "updated_at" TIMESTAMP
@@ -30,11 +30,11 @@ CREATE TABLE "exercice" (
   "updated_at" TIMESTAMP
 );
 
-CREATE TABLE "training_has_exercice" (
-  "training_id" integer NOT NULL REFERENCES training("id") ON DELETE CASCADE,
-  "exercice_id" integer NOT NULL REFERENCES exercice("id") ON DELETE CASCADE,
-  "created_at" TIMESTAMP DEFAULT NOW()  -- ici pas d'updated_at car une relation ne se met pas à jour, soit on l'ajoute soit on la supprime
-);
+-- CREATE TABLE "training_has_exercice" (
+--   "training_id" integer NOT NULL REFERENCES training("id") ON DELETE CASCADE,
+--   "exercice_id" integer NOT NULL REFERENCES exercice("id") ON DELETE CASCADE,
+--   "created_at" TIMESTAMP DEFAULT NOW()  -- ici pas d'updated_at car une relation ne se met pas à jour, soit on l'ajoute soit on la supprime
+-- );
 
 CREATE TABLE "role" (
   "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -56,17 +56,18 @@ CREATE TABLE "user" (
   "updated_at" TIMESTAMP
 );
 
-CREATE TABLE "user_has_training" (
-  "training_id" integer NOT NULL REFERENCES training("id") ON DELETE CASCADE,
-  "user_id" integer NOT NULL REFERENCES "user"("id") ON DELETE CASCADE,
-  "created_at" TIMESTAMPTZ DEFAULT NOW()
-  -- ici pas d'updated_at car une relation ne se met pas à jour, soit on l'ajoute soit on la supprime
-);
+-- CREATE TABLE "user_has_training" (
+--   "training_id" integer NOT NULL REFERENCES training("id") ON DELETE CASCADE,
+--   "user_id" integer NOT NULL REFERENCES "user"("id") ON DELETE CASCADE,
+--   "created_at" TIMESTAMP DEFAULT NOW(),
+--   "updated_at" TIMESTAMP
+--   -- ici pas d'updated_at car une relation ne se met pas à jour, soit on l'ajoute soit on la supprime
+-- );
 
 CREATE TABLE "training_done" (
   "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "exo_list" json ,
-  "training_id" integer NOT NULL,
+  "training_origin_id" integer NOT NULL,
   "user_id" integer NOT NULL,
   "created_at" TIMESTAMP DEFAULT NOW(),
   "updated_at" TIMESTAMP

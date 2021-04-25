@@ -7,7 +7,7 @@ TrainingDone.init({
   exoList: DataTypes.JSON
 }, {
   sequelize,
-  tableName: "training_done"
+  tableName: 'training_done'
 })
 
 module.exports = TrainingDone;

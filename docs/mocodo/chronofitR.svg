@@ -2,193 +2,167 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
 "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
-<svg width="709" height="330" view_box="0 0 709 330"
+<svg width="451" height="517" view_box="0 0 451 517"
 xmlns="http://www.w3.org/2000/svg"
-xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Sun, 18 Apr 2021 07:19:31</desc>
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Sat, 24 Apr 2021 10:08:47</desc>
 
-<rect id="frame" x="0" y="0" width="709" height="330" fill="#f5f5f5" stroke="none" stroke-width="0"/>
-
-<!-- Association USER_DO_TRAINING -->
-<line x1="436" y1="144" x2="288" y2="43" stroke="#bf812d" stroke-width="2"/>
-<text x="355" y="118.932428451" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
-<line x1="139" y1="144" x2="288" y2="43" stroke="#bf812d" stroke-width="2"/>
-<text x="178" y="132.767561939" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
-<g id="association-USER_DO_TRAINING">
-	<path d="M 346 18 a 14 14 90 0 1 14 14 V 43 h -144 V 32 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
-	<path d="M 360 43.0 v 11 a 14 14 90 0 1 -14 14 H 230 a 14 14 90 0 1 -14 -14 V 43.0 H 144" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
-	<rect x="216" y="18" width="144" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
-	<line x1="216" y1="43" x2="360" y2="43" stroke="#bf812d" stroke-width="1"/>
-	<text x="223" y="35.7" fill="#000000" font-family="Verdana" font-size="12">USER_DO_TRAINING</text>
-</g>
-
-<!-- Association RÉFÉRENCIE -->
-<line x1="436" y1="144" x2="436" y2="270" stroke="#bf812d" stroke-width="2"/>
-<text x="441.0" y="212" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
-<line x1="288" y1="270" x2="436" y2="270" stroke="#bf812d" stroke-width="2"/>
-<text x="363" y="287.0" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
-<g id="association-RÉFÉRENCIE">
-	<path d="M 468 245 a 14 14 90 0 1 14 14 V 270 h -92 V 259 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
-	<path d="M 482 270.0 v 11 a 14 14 90 0 1 -14 14 H 404 a 14 14 90 0 1 -14 -14 V 270.0 H 92" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
-	<rect x="390" y="245" width="92" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
-	<line x1="390" y1="270" x2="482" y2="270" stroke="#bf812d" stroke-width="1"/>
-	<text x="397" y="262.7" fill="#000000" font-family="Verdana" font-size="12">RÉFÉRENCIE</text>
-</g>
+<rect id="frame" x="0" y="0" width="451" height="517" fill="#f5f5f5" stroke="none" stroke-width="0"/>
 
 <!-- Association POSSEDE -->
-<line x1="611" y1="43" x2="436" y2="43" stroke="#bf812d" stroke-width="2"/>
-<text x="543" y="60.0" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
-<line x1="436" y1="144" x2="436" y2="43" stroke="#bf812d" stroke-width="2"/>
-<text x="441.0" y="85" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
+<line x1="334" y1="170" x2="334" y2="60" stroke="#bf812d" stroke-width="2"/>
+<text x="339.0" y="128" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<line x1="211" y1="60" x2="334" y2="60" stroke="#bf812d" stroke-width="2"/>
+<text x="270" y="77.0" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
 <g id="association-POSSEDE">
-	<path d="M 459 18 a 14 14 90 0 1 14 14 V 43 h -74 V 32 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
-	<path d="M 473 43.0 v 11 a 14 14 90 0 1 -14 14 H 413 a 14 14 90 0 1 -14 -14 V 43.0 H 74" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
-	<rect x="399" y="18" width="74" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
-	<line x1="399" y1="43" x2="473" y2="43" stroke="#bf812d" stroke-width="1"/>
-	<text x="406" y="35.7" fill="#000000" font-family="Verdana" font-size="12">POSSEDE</text>
+	<path d="M 357 35 a 14 14 90 0 1 14 14 V 60 h -74 V 49 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 371 60.0 v 11 a 14 14 90 0 1 -14 14 H 311 a 14 14 90 0 1 -14 -14 V 60.0 H 74" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="297" y="35" width="74" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
+	<line x1="297" y1="60" x2="371" y2="60" stroke="#bf812d" stroke-width="1"/>
+	<text x="304" y="52.7" fill="#000000" font-family="Verdana" font-size="12">POSSEDE</text>
 </g>
 
 <!-- Association CRÉE -->
-<line x1="436" y1="144" x2="288" y2="144" stroke="#bf812d" stroke-width="2"/>
-<text x="356" y="161.0" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
-<line x1="139" y1="144" x2="288" y2="144" stroke="#bf812d" stroke-width="2"/>
-<text x="178" y="161.0" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<line x1="211" y1="60" x2="211" y2="170" stroke="#bf812d" stroke-width="2"/>
+<text x="216.0" y="128" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
+<line x1="211" y1="305" x2="211" y2="170" stroke="#bf812d" stroke-width="2"/>
+<text x="216.0" y="221" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-CRÉE">
-	<path d="M 298 119 a 14 14 90 0 1 14 14 V 144 h -48 V 133 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
-	<path d="M 312 144.0 v 11 a 14 14 90 0 1 -14 14 H 278 a 14 14 90 0 1 -14 -14 V 144.0 H 48" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
-	<rect x="264" y="119" width="48" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
-	<line x1="264" y1="144" x2="312" y2="144" stroke="#bf812d" stroke-width="1"/>
-	<text x="271" y="136.7" fill="#000000" font-family="Verdana" font-size="12">CRÉE</text>
+	<path d="M 221 145 a 14 14 90 0 1 14 14 V 170 h -48 V 159 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 235 170.0 v 11 a 14 14 90 0 1 -14 14 H 201 a 14 14 90 0 1 -14 -14 V 170.0 H 48" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="187" y="145" width="48" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
+	<line x1="187" y1="170" x2="235" y2="170" stroke="#bf812d" stroke-width="1"/>
+	<text x="194" y="162.7" fill="#000000" font-family="Verdana" font-size="12">CRÉE</text>
 </g>
 
 <!-- Association ENREGISTRE -->
-<line x1="139" y1="144" x2="139" y2="270" stroke="#bf812d" stroke-width="2"/>
-<text x="144.0" y="237" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
-<line x1="288" y1="270" x2="139" y2="270" stroke="#bf812d" stroke-width="2"/>
-<text x="192" y="287.0" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
+<line x1="211" y1="305" x2="79" y2="305" stroke="#bf812d" stroke-width="2"/>
+<text x="150" y="322.0" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<line x1="79" y1="170" x2="79" y2="305" stroke="#bf812d" stroke-width="2"/>
+<text x="84.0" y="221" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
 <g id="association-ENREGISTRE">
-	<path d="M 172 245 a 14 14 90 0 1 14 14 V 270 h -94 V 259 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
-	<path d="M 186 270.0 v 11 a 14 14 90 0 1 -14 14 H 106 a 14 14 90 0 1 -14 -14 V 270.0 H 94" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
-	<rect x="92" y="245" width="94" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
-	<line x1="92" y1="270" x2="186" y2="270" stroke="#bf812d" stroke-width="1"/>
-	<text x="99" y="262.7" fill="#000000" font-family="Verdana" font-size="12">ENREGISTRE</text>
+	<path d="M 112 280 a 14 14 90 0 1 14 14 V 305 h -94 V 294 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 126 305.0 v 11 a 14 14 90 0 1 -14 14 H 46 a 14 14 90 0 1 -14 -14 V 305.0 H 94" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="32" y="280" width="94" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
+	<line x1="32" y1="305" x2="126" y2="305" stroke="#bf812d" stroke-width="1"/>
+	<text x="39" y="297.7" fill="#000000" font-family="Verdana" font-size="12">ENREGISTRE</text>
+</g>
+
+<!-- Association RÉFÉRENCIE -->
+<line x1="211" y1="60" x2="79" y2="60" stroke="#bf812d" stroke-width="2"/>
+<text x="130" y="77.0" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<line x1="79" y1="170" x2="79" y2="60" stroke="#bf812d" stroke-width="2"/>
+<text x="84.0" y="128" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-RÉFÉRENCIE">
+	<path d="M 111 35 a 14 14 90 0 1 14 14 V 60 h -92 V 49 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 125 60.0 v 11 a 14 14 90 0 1 -14 14 H 47 a 14 14 90 0 1 -14 -14 V 60.0 H 92" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="33" y="35" width="92" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
+	<line x1="33" y1="60" x2="125" y2="60" stroke="#bf812d" stroke-width="1"/>
+	<text x="40" y="52.7" fill="#000000" font-family="Verdana" font-size="12">RÉFÉRENCIE</text>
 </g>
 
 <!-- Association DROITS -->
-<line x1="139" y1="144" x2="41" y2="144" stroke="#bf812d" stroke-width="2"/>
-<text x="79" y="161.0" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
-<line x1="41" y1="43" x2="41" y2="144" stroke="#bf812d" stroke-width="2"/>
-<text x="46.0" y="94" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<line x1="211" y1="305" x2="334" y2="305" stroke="#bf812d" stroke-width="2"/>
+<text x="250" y="322.0" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
+<line x1="420" y1="305" x2="334" y2="305" stroke="#bf812d" stroke-width="2"/>
+<text x="371" y="322.0" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-DROITS">
-	<path d="M 59 119 a 14 14 90 0 1 14 14 V 144 h -64 V 133 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
-	<path d="M 73 144.0 v 11 a 14 14 90 0 1 -14 14 H 23 a 14 14 90 0 1 -14 -14 V 144.0 H 64" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
-	<rect x="9" y="119" width="64" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
-	<line x1="9" y1="144" x2="73" y2="144" stroke="#bf812d" stroke-width="1"/>
-	<text x="16" y="136.7" fill="#000000" font-family="Verdana" font-size="12">DROITS</text>
-</g>
-
-<!-- Association TRAINING_HAS_EXERCICE -->
-<line x1="436" y1="144" x2="611" y2="144" stroke="#bf812d" stroke-width="2"/>
-<text x="495" y="161.0" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
-<line x1="611" y1="270" x2="611" y2="144" stroke="#bf812d" stroke-width="2"/>
-<text x="616.0" y="211" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
-<g id="association-TRAINING_HAS_EXERCICE">
-	<path d="M 686 119 a 14 14 90 0 1 14 14 V 144 h -178 V 133 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
-	<path d="M 700 144.0 v 11 a 14 14 90 0 1 -14 14 H 536 a 14 14 90 0 1 -14 -14 V 144.0 H 178" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
-	<rect x="522" y="119" width="178" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
-	<line x1="522" y1="144" x2="700" y2="144" stroke="#bf812d" stroke-width="1"/>
-	<text x="529" y="136.7" fill="#000000" font-family="Verdana" font-size="12">TRAINING_HAS_EXERCICE</text>
+	<path d="M 352 280 a 14 14 90 0 1 14 14 V 305 h -64 V 294 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 366 305.0 v 11 a 14 14 90 0 1 -14 14 H 316 a 14 14 90 0 1 -14 -14 V 305.0 H 64" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="302" y="280" width="64" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
+	<line x1="302" y1="305" x2="366" y2="305" stroke="#bf812d" stroke-width="1"/>
+	<text x="309" y="297.7" fill="#000000" font-family="Verdana" font-size="12">DROITS</text>
 </g>
 
 <!-- Entity CATEGORIE -->
 <g id="entity-CATEGORIE">
 	<g id="frame-CATEGORIE">
-		<rect x="570" y="9" width="82" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
-		<rect x="570" y="34.0" width="82" height="43" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
-		<rect x="570" y="9" width="82" height="68" fill="none" stroke="#35978f" stroke-width="2"/>
-		<line x1="570" y1="34" x2="652" y2="34" stroke="#35978f" stroke-width="1"/>
+		<rect x="293" y="136" width="82" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="293" y="161.0" width="82" height="43" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="293" y="136" width="82" height="68" fill="none" stroke="#35978f" stroke-width="2"/>
+		<line x1="293" y1="161" x2="375" y2="161" stroke="#35978f" stroke-width="1"/>
 	</g>
-	<text x="575" y="26.7" fill="#000000" font-family="Verdana" font-size="12">CATEGORIE</text>
-	<text x="575" y="51.8" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="575" y1="54" x2="587" y2="54" stroke="#000000" stroke-width="1"/>
-	<text x="575" y="68.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="298" y="153.7" fill="#000000" font-family="Verdana" font-size="12">CATEGORIE</text>
+	<text x="298" y="178.8" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="298" y1="181" x2="310" y2="181" stroke="#000000" stroke-width="1"/>
+	<text x="298" y="195.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
 </g>
 
 <!-- Entity ENTRAINEMENT -->
 <g id="entity-ENTRAINEMENT">
 	<g id="frame-ENTRAINEMENT">
-		<rect x="382" y="93" width="108" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
-		<rect x="382" y="118.0" width="108" height="77" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
-		<rect x="382" y="93" width="108" height="102" fill="none" stroke="#35978f" stroke-width="2"/>
-		<line x1="382" y1="118" x2="490" y2="118" stroke="#35978f" stroke-width="1"/>
+		<rect x="157" y="9" width="108" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="157" y="34.0" width="108" height="77" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="157" y="9" width="108" height="102" fill="none" stroke="#35978f" stroke-width="2"/>
+		<line x1="157" y1="34" x2="265" y2="34" stroke="#35978f" stroke-width="1"/>
 	</g>
-	<text x="387" y="110.7" fill="#000000" font-family="Verdana" font-size="12">ENTRAINEMENT</text>
-	<text x="387" y="135.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="387" y1="138" x2="399" y2="138" stroke="#000000" stroke-width="1"/>
-	<text x="387" y="152.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
-	<text x="387" y="169.8" fill="#000000" font-family="Verdana" font-size="12">exo_list</text>
-	<text x="387" y="186.8" fill="#000000" font-family="Verdana" font-size="12">is_benchmark</text>
+	<text x="162" y="26.7" fill="#000000" font-family="Verdana" font-size="12">ENTRAINEMENT</text>
+	<text x="162" y="51.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="162" y1="54" x2="174" y2="54" stroke="#000000" stroke-width="1"/>
+	<text x="162" y="68.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="162" y="85.8" fill="#000000" font-family="Verdana" font-size="12">exo_list</text>
+	<text x="162" y="102.8" fill="#000000" font-family="Verdana" font-size="12">is_benchmark</text>
 </g>
 
 <!-- Entity EXERCICE -->
 <g id="entity-EXERCICE">
 	<g id="frame-EXERCICE">
-		<rect x="567" y="219" width="88" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
-		<rect x="567" y="244.0" width="88" height="77" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
-		<rect x="567" y="219" width="88" height="102" fill="none" stroke="#35978f" stroke-width="2"/>
-		<line x1="567" y1="244" x2="655" y2="244" stroke="#35978f" stroke-width="1"/>
+		<rect x="167" y="406" width="88" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="167" y="431.0" width="88" height="77" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="167" y="406" width="88" height="102" fill="none" stroke="#35978f" stroke-width="2"/>
+		<line x1="167" y1="431" x2="255" y2="431" stroke="#35978f" stroke-width="1"/>
 	</g>
-	<text x="580" y="236.7" fill="#000000" font-family="Verdana" font-size="12">EXERCICE</text>
-	<text x="572" y="261.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="572" y1="264" x2="584" y2="264" stroke="#000000" stroke-width="1"/>
-	<text x="572" y="278.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
-	<text x="572" y="295.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
-	<text x="572" y="312.8" fill="#000000" font-family="Verdana" font-size="12">isBenchmark</text>
+	<text x="180" y="423.7" fill="#000000" font-family="Verdana" font-size="12">EXERCICE</text>
+	<text x="172" y="448.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="172" y1="451" x2="184" y2="451" stroke="#000000" stroke-width="1"/>
+	<text x="172" y="465.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="172" y="482.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
+	<text x="172" y="499.8" fill="#000000" font-family="Verdana" font-size="12">isBenchmark</text>
 </g>
 
 <!-- Entity ROLE -->
 <g id="entity-ROLE">
 	<g id="frame-ROLE">
-		<rect x="19" y="9" width="44" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
-		<rect x="19" y="34.0" width="44" height="43" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
-		<rect x="19" y="9" width="44" height="68" fill="none" stroke="#35978f" stroke-width="2"/>
-		<line x1="19" y1="34" x2="63" y2="34" stroke="#35978f" stroke-width="1"/>
+		<rect x="398" y="271" width="44" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="398" y="296.0" width="44" height="43" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="398" y="271" width="44" height="68" fill="none" stroke="#35978f" stroke-width="2"/>
+		<line x1="398" y1="296" x2="442" y2="296" stroke="#35978f" stroke-width="1"/>
 	</g>
-	<text x="24" y="26.7" fill="#000000" font-family="Verdana" font-size="12">ROLE</text>
-	<text x="24" y="51.8" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="24" y1="54" x2="36" y2="54" stroke="#000000" stroke-width="1"/>
-	<text x="24" y="68.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="403" y="288.7" fill="#000000" font-family="Verdana" font-size="12">ROLE</text>
+	<text x="403" y="313.8" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="403" y1="316" x2="415" y2="316" stroke="#000000" stroke-width="1"/>
+	<text x="403" y="330.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
 </g>
 
 <!-- Entity USER -->
 <g id="entity-USER">
 	<g id="frame-USER">
-		<rect x="105" y="68" width="68" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
-		<rect x="105" y="93.0" width="68" height="127" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
-		<rect x="105" y="68" width="68" height="152" fill="none" stroke="#35978f" stroke-width="2"/>
-		<line x1="105" y1="93" x2="173" y2="93" stroke="#35978f" stroke-width="1"/>
+		<rect x="177" y="229" width="68" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="177" y="254.0" width="68" height="127" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="177" y="229" width="68" height="152" fill="none" stroke="#35978f" stroke-width="2"/>
+		<line x1="177" y1="254" x2="245" y2="254" stroke="#35978f" stroke-width="1"/>
 	</g>
-	<text x="122" y="85.7" fill="#000000" font-family="Verdana" font-size="12">USER</text>
-	<text x="110" y="110.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="110" y1="113" x2="122" y2="113" stroke="#000000" stroke-width="1"/>
-	<text x="110" y="127.7" fill="#000000" font-family="Verdana" font-size="12">pseudo</text>
-	<text x="110" y="144.8" fill="#000000" font-family="Verdana" font-size="12">prenom</text>
-	<text x="110" y="161.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
-	<text x="110" y="178.8" fill="#000000" font-family="Verdana" font-size="12">email</text>
-	<text x="110" y="195.8" fill="#000000" font-family="Verdana" font-size="12">password</text>
-	<text x="110" y="212.8" fill="#000000" font-family="Verdana" font-size="12">status</text>
+	<text x="194" y="246.7" fill="#000000" font-family="Verdana" font-size="12">USER</text>
+	<text x="182" y="271.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="182" y1="274" x2="194" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="182" y="288.7" fill="#000000" font-family="Verdana" font-size="12">pseudo</text>
+	<text x="182" y="305.8" fill="#000000" font-family="Verdana" font-size="12">prenom</text>
+	<text x="182" y="322.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="182" y="339.8" fill="#000000" font-family="Verdana" font-size="12">email</text>
+	<text x="182" y="356.8" fill="#000000" font-family="Verdana" font-size="12">password</text>
+	<text x="182" y="373.8" fill="#000000" font-family="Verdana" font-size="12">status</text>
 </g>
 
 <!-- Entity ENTRAINEMENT-FAIT -->
 <g id="entity-ENTRAINEMENT-FAIT">
 	<g id="frame-ENTRAINEMENT-FAIT">
-		<rect x="218" y="236" width="140" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
-		<rect x="218" y="261.0" width="140" height="43" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
-		<rect x="218" y="236" width="140" height="68" fill="none" stroke="#35978f" stroke-width="2"/>
-		<line x1="218" y1="261" x2="358" y2="261" stroke="#35978f" stroke-width="1"/>
+		<rect x="9" y="136" width="140" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="9" y="161.0" width="140" height="43" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="9" y="136" width="140" height="68" fill="none" stroke="#35978f" stroke-width="2"/>
+		<line x1="9" y1="161" x2="149" y2="161" stroke="#35978f" stroke-width="1"/>
 	</g>
-	<text x="223" y="253.7" fill="#000000" font-family="Verdana" font-size="12">ENTRAINEMENT-FAIT</text>
-	<text x="223" y="278.8" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="223" y1="281" x2="235" y2="281" stroke="#000000" stroke-width="1"/>
-	<text x="223" y="295.8" fill="#000000" font-family="Verdana" font-size="12">exo_list</text>
+	<text x="14" y="153.7" fill="#000000" font-family="Verdana" font-size="12">ENTRAINEMENT-FAIT</text>
+	<text x="14" y="178.8" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="14" y1="181" x2="26" y2="181" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="195.8" fill="#000000" font-family="Verdana" font-size="12">exo_list</text>
 </g>
 </svg>

@@ -10,7 +10,7 @@ Exercice.init({
   
 }, {
   sequelize,
-  tableName: "exercice"
+  tableName: 'exercice'
 })
 
 module.exports = Exercice;
