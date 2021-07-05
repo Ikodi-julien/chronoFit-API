@@ -6,9 +6,14 @@ module.exports = {
     
     try {
       const users = await User.findAll({
-        include: ['role']
+        include: ['role', 'trainings_created', {
+          association: 'trainings_done',
+          include: {
+            association: 'training_origin',
+            include: 'category'
+          }
+        }]
       });
-      console
       res.json(users);
       
     } catch(err) {
@@ -18,7 +23,17 @@ module.exports = {
   },
   getOne: async(req, res) => {
     try {
-      const user = await User.findByPk(req.params.id);
+      
+      const user = await User.findByPk(req.params.id, {
+        include: ['role', 'trainings_created', {
+          association: 'trainings_done',
+          include: {
+            association: 'training_origin',
+            include: 'category'
+          }
+        }]
+      });
+      
       if (!user) {
         res.status(400).json(`User with id: ${req.params.id} not found`);
         return;

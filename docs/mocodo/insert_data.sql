@@ -26,6 +26,16 @@ INSERT INTO "exercice" ("name", "description", "is_benchmark") VALUES
 ('Air squat', 'non pas de desc', 'true'),
 ('Fentes alternées', 'pas de description', 'true');
 
+INSERT INTO "training_done" ("exo_list", "training_origin_id", "user_id") VALUES
+('{"test":"1"}', 1, 1),
+('{"test":"2"}', 2, 2),
+('{"test":"3"}', 3, 1),
+('{"test":"4"}', 1, 2),
+('{"test":"5"}', 2, 1);
+
+COMMIT;
+
+
 -- INSERT INTO "training_has_exercice" ("training_id", "exercice_id") VALUES
 -- (1, 1),
 -- (1, 2),
@@ -43,12 +53,3 @@ INSERT INTO "exercice" ("name", "description", "is_benchmark") VALUES
 -- (1, 1),
 -- (2, 2),
 -- (3, 1);
-
-INSERT INTO "training_done" ("exo_list", "training_origin_id", "user_id") VALUES
-('{"test":"1"}', 1, 1),
-('{"test":"2"}', 2, 2),
-('{"test":"3"}', 3, 1),
-('{"test":"4"}', 1, 2),
-('{"test":"5"}', 2, 1);
-
-COMMIT;

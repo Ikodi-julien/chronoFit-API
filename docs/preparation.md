@@ -1,4 +1,4 @@
-# Chronofit-react
+# CHRONOFIT-API
 
 ## Besoins
 

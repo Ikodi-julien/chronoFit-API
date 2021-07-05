@@ -3,34 +3,31 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories":
-  {
+  "directories": {
     "doc": "docs"
   },
-  "scripts":
-  {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node-dev index.js"
   },
-  "repository":
-  {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/Ikodi-julien/chronoFit-API.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs":
-  {
+  "bugs": {
     "url": "https://github.com/Ikodi-julien/chronoFit-API/issues"
   },
   "homepage": "https://github.com/Ikodi-julien/chronoFit-API#readme",
-  "dependencies":
-  {
+  "dependencies": {
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "multer": "^1.4.2",
+    "node-dev": "^6.7.0",
     "pg": "^8.2.1",
     "sanitizer": "^0.1.3",
     "sequelize": "^5.21.3",

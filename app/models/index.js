@@ -16,20 +16,6 @@ Training.belongsTo(Category, {
   foreignKey: 'category_id'
 });
 
-Training.belongsToMany(Exercice, {
-  as: 'exercices',
-  through: 'training_has_exercice',
-  foreignKey: 'training_id',
-  otherKey: 'exercice_id'
-});
-
-Exercice.belongsToMany(Training, {
-  as: 'trainings',
-  through: 'training_has_exercice',
-  foreignKey: 'exercice_id',
-  otherKey: 'training_id'
-});
-
 User.hasMany(Training, {
   as: 'trainings_created',
   foreignKey: 'creator_id'
@@ -39,20 +25,6 @@ Training.belongsTo(User, {
   as: 'creator',
   foreignKey: 'creator_id'
 });
-
-Training.belongsToMany(User, {
-  as: 'done_by',
-  through: 'user_has_training',
-  foreignKey: 'training_id',
-  otherKey: 'user_id'
-})
-
-User.belongsToMany(Training, {
-  as: 'trainings',
-  through: 'user_has_training',
-  foreignKey: 'user_id',
-  otherKey: 'training_id'
-})
 
 Training.hasMany(TrainingDone, {
   as: 'trainings_done',
@@ -80,7 +52,7 @@ User.hasMany(TrainingDone, {
 });
 
 TrainingDone.belongsTo(User, {
-  as: 'user',
+  as: 'done_by',
   foreignKey: 'user_id'
 })
 /*------------------------------------*/

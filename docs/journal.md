@@ -2,6 +2,13 @@
 
 ## Journal de suivi des réalisations, 1ère entrée le 23/04/2021
 
+### Le 25/04/2021.
+
+J'opte pour l'envoi d'objets JSON en méthode POST, donc je vire multer et met express.json() à la place.
+Teste des associations sur tous les modèles => ok grace à des mises au point.
+
+A partir de maintenant, j'ai des fakes data et possibilité de converser avec mon API, je passe à React-redux.
+
 ### Le 24/04/2021.
 
 Ajout des routes manquantes pour les catégories.

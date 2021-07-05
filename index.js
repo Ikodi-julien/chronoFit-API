@@ -4,16 +4,13 @@ const express = require('express');
 const router = require('./app/router');
 // Enables CORS
 const cors = require('cors');
-// Handles form-data
-const multer = require('multer');
 /*------------------------*/
 const app = express();
 
 /*------------------------*/
 app.use(cors('*'));
 app.use(express.urlencoded({extended: true}));
-const multipartParser = multer();
-app.use(multipartParser.none());
+app.use(express.json());
 app.use(express.static('public'));
 
 // TODO Prévoir le middleware sanitizer de variables ?

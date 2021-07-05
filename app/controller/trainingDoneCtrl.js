@@ -5,7 +5,7 @@ module.exports = {
     
     try {
       const trainings = await TrainingDone.findAll({
-        include: ['training_origin', 'user']
+        include: ['training_origin', 'done_by']
       });
       console
       res.json(trainings);
@@ -17,7 +17,10 @@ module.exports = {
   },
   getOne: async(req, res) => {
     try {
-      const training = await TrainingDone.findByPk(req.params.id);
+      const training = await TrainingDone.findByPk(req.params.id, {
+        include: ['training_origin', 'done_by']
+      });
+      
       if (!training) {
         res.status(400).json(`TrainingDone with id: ${req.params.id} not found`);
         return;
