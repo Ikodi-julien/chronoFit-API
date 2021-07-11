@@ -4,7 +4,7 @@ const sequelize = require('../db');
 class TrainingDone extends Model {};
 
 TrainingDone.init({
-  exoList: DataTypes.JSON
+  duration: DataTypes.INTEGER
 }, {
   sequelize,
   tableName: 'training_done'

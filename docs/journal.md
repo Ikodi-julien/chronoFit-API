@@ -2,6 +2,16 @@
 
 ## Journal de suivi des réalisations, 1ère entrée le 23/04/2021
 
+### Le 11/07/2021
+
+J'espère être parvenu à une version définitive du MCD.
+Je finis et test le script de création de la base avec séquelize.
+
+### Le 10/07/2021
+
+Reprise du projet, entre temps il y a eu le TP DWWM.
+Aujourd'hui je reprends le cours du projet, je fais un script de création et seeding de la base d'après celui de concord.
+
 ### Le 25/04/2021.
 
 J'opte pour l'envoi d'objets JSON en méthode POST, donc je vire multer et met express.json() à la place.

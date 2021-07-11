@@ -9,7 +9,6 @@ User.init({
   lastname: DataTypes.TEXT,
   password: DataTypes.TEXT,
   email: DataTypes.TEXT,
-  status: DataTypes.TEXT
 }, {
   sequelize,
   tableName: 'user'

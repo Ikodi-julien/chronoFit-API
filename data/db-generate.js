@@ -8,7 +8,15 @@ const {
   } = require('../app/models');
 const sequelize = require('../app/db');
 
-const categories = require('../data/categories.json');
+const faker = require('faker');
+faker.locale = 'fr';
+const bcrypt = require('bcrypt');
+const SALT_ROUNDS = 2;
+
+const categories = require('./categories');
+const roles = require('./roles')
+const avatarStd = require('./avatarStd');
+const Result = require('../app/models/result');
 
 // Create a db first and set DATABASE_URL in your .env before running this file
 
@@ -16,158 +24,82 @@ const categories = require('../data/categories.json');
   try {
     await sequelize.sync({ force: true })
 
-    const createdTags = await Tag.bulkCreate(tags);
+    // CATEGORY
+    const categoriesSequelize = await Category.bulkCreate(categories);
 
-    const createdChannels = []
-
-    // This creates a channel in DB for each anim in anim-data.response
-    for (const anim of animsData.response) {
-      const channel = await Channel.create(
-        {
-          title: anim.name,
-          img_url: anim.img,
-          rank: anim.rank,
-          plot: anim.plot,
-          year: anim.year,
-        })
-      const channelTags = []
-
-      for (const tag of anim.tags) {
-        const matchingTag = createdTags.find(
-          (createdTag) => createdTag.dataValues.name === tag
-        )
-        if (matchingTag) {
-          await channel.addTag(matchingTag.dataValues.id)
-          channelTags.push(matchingTag)
-        }
-      }
-      await channel.save()
-      createdChannels.push({ channel, tags: channelTags })
-    }
-
-    // This creates 50 users
-    for (let index = 0; index < 50; index++) {
+    // ROLE
+    const rolesSequelize = await Role.bulkCreate(roles);
+    
+    // USER
+    const users = [];
+    for (let index = 0; index < 20; index++) {
       const newUser = await User.create({
+        pseudo: faker.internet.userName(),        role_id: Math.floor(Math.random() * rolesSequelize.length + 1),
+        lastname: faker.name.lastName(),
+        firstname: faker.name.firstName(),
+        avatar: avatarStd,
         email: faker.internet.email(),
         password: await bcrypt.hash(faker.internet.password(), SALT_ROUNDS),
-        nickname: faker.internet.userName(),
-        avatar: avatarList[Math.floor(Math.random() * 6)],
+        role: 3 // authenticated ?
       })
-
-      // Add  random tags to user
-      const tagCount = Math.round(Math.random() * 5 + 1)
-      const userTags = []
-
-      for (let index = 1; index <= tagCount; index++) {
-        const randomIndex = Math.floor(Math.random() * createdTags.length)
-
-        if (
-          createdTags[randomIndex] &&
-          !userTags.includes(createdTags[randomIndex])
-        ) {
-          await newUser.addTag(createdTags[randomIndex])
-          userTags.push(createdTags[randomIndex])
-        }
-      }
-
-      // Search for channels with the same tags as the user
-      const recommendedChannels = []
-
-      for (const userTag of userTags) {
-        for (const { channel, tags } of createdChannels) {
-          const matchingTag = tags.find(
-            (channelTag) =>
-              channelTag.dataValues.name === userTag.dataValues.name
-          )
-
-          if (matchingTag) {
-            recommendedChannels.push(channel)
-          }
-        }
-      }
-      
-      // Add half of reco channels to user channels
-      for (let index = 0; index < (recommendedChannels.length / 2); index++) {
-        await newUser.addChannel(
-          recommendedChannels[index].dataValues.id
-        )
-      }
-
-      await newUser.save()
+      users.push(newUser);
     }
-    
-    // Inserts fakeMessages in DB
-    await Message.bulkCreate(messages);
-
-    // Creates test user
-    const testUser = await User.create({
-      email: 'testeur@testmail.com',
-      password: await bcrypt.hash('7357', SALT_ROUNDS),
-      nickname: 'le serial testeur',
-    })
-
-    const testUserTags = []
-
-    // Add random tags to test user
-    for (let index = 1; index <= 5; index++) {
-      const randomIndex = Math.floor(Math.random() * createdTags.length)
-
-      if (
-        createdTags[randomIndex] &&
-        !testUserTags.includes(createdTags[randomIndex])
-      ) {
-        await testUser.addTag(createdTags[randomIndex])
-        testUserTags.push(createdTags[randomIndex])
+    // TRAINING
+    const trainings = [];
+    for (let index = 0; index <5; index++) {
+      const newTraining = await Training.create({
+        userId: Math.floor(Math.random() * users.length + 1),
+        categoryId: Math.floor(Math.random() * categoriesSequelize.length + 1),
+        name: faker.lorem.word(),
+        isBenchmark: false,
+      })
+      trainings.push(newTraining);
+    }
+    // EXERCICE
+    const exercices = [];
+    for (let index = 0; index < 20; index++) {
+      const newExercice = await Exercice.create({
+        name: faker.lorem.word(),
+        description: faker.lorem.sentences(4),
+        isBenchmark: false,
+      })
+      exercices.push(newExercice);
+    }
+    // TRAINING-DONE
+    const trainingsDone = [];
+    for (let index = 0; index< 10; index++) {
+      const newTrainingDone = await TrainingDone.create({
+        userId: Math.floor(Math.random() * users.length + 1),
+        trainingId: Math.floor(Math.random() * trainings.length + 1),
+        duration: Math.floor(Math.random() * 2000)
+      })
+      trainingsDone.push(newTrainingDone);
+    }
+    // TRAINING-HAS-EXERCICE
+    for (const training of trainings) {
+      for (let index = 0; index < 5; index++) {
+        await training.addExercice(Math.floor(Math.random() * exercices.length + 1))
       }
     }
-
-    // Filter channels with matching tags
-    const recommendedChannels = []
-
-    for (const userTag of testUserTags) {
-      for (const { channel, tags } of createdChannels) {
-        const matchingTag = tags.find(
-          (channelTag) => channelTag.dataValues.name === userTag.dataValues.name
-        )
-
-        if (matchingTag) {
-          recommendedChannels.push(channel)
-        } 
+    // RESULT
+    // Un resultat pour chaque exercice de chaque training-done
+    for (const trainingDone of trainingsDone) {
+      // Récupérer le training d'origine
+      const originTraining = await Training.findByPk(trainingDone.dataValues.training.id);
+      // Récupérer les exos du training d'origine
+      const exos = originTraining.dataValues.exercices;
+      // Pour chaque exo du training d'origine, créer un Result
+      for (const exo of exos) {
+        await Result.create({
+          userId: trainingDone.dataValues.userId,
+          exerciceId: exo.dataValues.id,
+          trainingDoneId: trainingDone.dataValues.id,
+          duration:  Math.floor(Math.random() * 200),
+          weight:  Math.floor(Math.random() * 20),
+          reps:  Math.floor(Math.random() * 20),
+        })
       }
     }
-
-    // Add half of reco channels to user channels
-    for (let index = 0; index < (recommendedChannels.length / 2); index++) {
-      await testUser.addChannel(
-        recommendedChannels[index].dataValues.id
-      )
-    }
-
-    await testUser.save()
-    
-    const bob = await User.create({
-      email: 'bob@bob.fr',
-      password: await bcrypt.hash('bob', SALT_ROUNDS),
-      nickname: 'bob',
-      avatar: avatarList[Math.floor(Math.random() * 6)],
-    })
-    await bob.save()
-    
-    // Test messages
-    // const channel = await Channel.findByPk(1, {
-    //   include: [{
-    //     association: 'users',
-    //     attributes: ['id', 'avatar', 'nickname', 'isLogged'],
-    //     through: {
-    //         attributes: []
-    //     }
-    //   }, 
-    //   {
-    //     association: 'channel_messages',
-    //   }]
-    // });
-    // console.log(channel);
-    // console.log(channel.channel_messages);
     
   } catch (err) {
     console.error('>> Error while creating: ', err)
