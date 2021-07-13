@@ -2,243 +2,243 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
 "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
-<svg width="554" height="583" view_box="0 0 554 583"
+<svg width="570" height="531" view_box="0 0 570 531"
 xmlns="http://www.w3.org/2000/svg"
-xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Sun, 11 Jul 2021 06:15:44</desc>
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Sun, 11 Jul 2021 07:22:17</desc>
 
-<rect id="frame" x="0" y="0" width="554" height="583" fill="#f7f7f7" stroke="none" stroke-width="0"/>
-
-<!-- Association HAS-USER -->
-<line x1="66" y1="515" x2="225" y2="515" stroke="#4393c3" stroke-width="2"/>
-<text x="128" y="532.0" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
-<line x1="389" y1="389" x2="225" y2="515" stroke="#4393c3" stroke-width="2"/>
-<text x="328" y="412.893725364" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
-<g id="association-HAS-USER">
-	<path d="M 251 490 a 14 14 90 0 1 14 14 V 515 h -80 V 504 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
-	<path d="M 265 515.0 v 11 a 14 14 90 0 1 -14 14 H 199 a 14 14 90 0 1 -14 -14 V 515.0 H 80" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
-	<rect x="185" y="490" width="80" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
-	<line x1="185" y1="515" x2="265" y2="515" stroke="#4393c3" stroke-width="1"/>
-	<text x="192" y="507.7" fill="#000000" font-family="Verdana" font-size="12">HAS-USER</text>
-</g>
+<rect id="frame" x="0" y="0" width="570" height="531" fill="#f7f7f7" stroke="none" stroke-width="0"/>
 
 <!-- Association POSSEDE -->
-<line x1="66" y1="60" x2="66" y2="212" stroke="#4393c3" stroke-width="2"/>
-<text x="71.0" y="111" fill="#b2182b" font-family="Verdana" font-size="12">1,N</text>
-<line x1="225" y1="212" x2="66" y2="212" stroke="#4393c3" stroke-width="2"/>
-<text x="151" y="204.0" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<line x1="474" y1="85" x2="474" y2="211" stroke="#4393c3" stroke-width="2"/>
+<text x="479.0" y="136" fill="#b2182b" font-family="Verdana" font-size="12">1,N</text>
+<line x1="474" y1="320" x2="474" y2="211" stroke="#4393c3" stroke-width="2"/>
+<text x="479.0" y="253" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
 <g id="association-POSSEDE">
-	<path d="M 89 187 a 14 14 90 0 1 14 14 V 212 h -74 V 201 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
-	<path d="M 103 212.0 v 11 a 14 14 90 0 1 -14 14 H 43 a 14 14 90 0 1 -14 -14 V 212.0 H 74" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
-	<rect x="29" y="187" width="74" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
-	<line x1="29" y1="212" x2="103" y2="212" stroke="#4393c3" stroke-width="1"/>
-	<text x="36" y="204.7" fill="#000000" font-family="Verdana" font-size="12">POSSEDE</text>
-</g>
-
-<!-- Association TRAINING-HAS-EXERCICE -->
-<line x1="225" y1="212" x2="225" y2="60" stroke="#4393c3" stroke-width="2"/>
-<text x="230.0" y="145" fill="#b2182b" font-family="Verdana" font-size="12">N,N</text>
-<line x1="389" y1="60" x2="225" y2="60" stroke="#4393c3" stroke-width="2"/>
-<text x="317" y="77.0" fill="#b2182b" font-family="Verdana" font-size="12">N,N</text>
-<g id="association-TRAINING-HAS-EXERCICE">
-	<path d="M 298 35 a 14 14 90 0 1 14 14 V 60 h -174 V 49 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
-	<path d="M 312 60.0 v 11 a 14 14 90 0 1 -14 14 H 152 a 14 14 90 0 1 -14 -14 V 60.0 H 174" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
-	<rect x="138" y="35" width="174" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
-	<line x1="138" y1="60" x2="312" y2="60" stroke="#4393c3" stroke-width="1"/>
-	<text x="145" y="52.7" fill="#000000" font-family="Verdana" font-size="12">TRAINING-HAS-EXERCICE</text>
-	<text x="145" y="77.8" fill="#000000" font-family="Verdana" font-size="12">#training_id #exercice_id</text>
-</g>
-
-<!-- Association HAS-TRAINING -->
-<line x1="66" y1="515" x2="66" y2="389" stroke="#4393c3" stroke-width="2"/>
-<text x="71.0" y="448" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
-<line x1="225" y1="212" x2="66" y2="389" stroke="#4393c3" stroke-width="2"/>
-<text x="150" y="263.970020181" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
-<g id="association-HAS-TRAINING">
-	<path d="M 106 364 a 14 14 90 0 1 14 14 V 389 h -108 V 378 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
-	<path d="M 120 389.0 v 11 a 14 14 90 0 1 -14 14 H 26 a 14 14 90 0 1 -14 -14 V 389.0 H 108" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
-	<rect x="12" y="364" width="108" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
-	<line x1="12" y1="389" x2="120" y2="389" stroke="#4393c3" stroke-width="1"/>
-	<text x="19" y="381.7" fill="#000000" font-family="Verdana" font-size="12">HAS-TRAINING</text>
-</g>
-
-<!-- Association HASONE2 -->
-<line x1="389" y1="389" x2="500" y2="389" stroke="#4393c3" stroke-width="2"/>
-<text x="428" y="406.0" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
-<line x1="500" y1="212" x2="500" y2="389" stroke="#4393c3" stroke-width="2"/>
-<text x="505.0" y="305" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
-<g id="association-HASONE2">
-	<path d="M 519 364 a 14 14 90 0 1 14 14 V 389 h -66 V 378 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
-	<path d="M 533 389.0 v 11 a 14 14 90 0 1 -14 14 H 481 a 14 14 90 0 1 -14 -14 V 389.0 H 66" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
-	<rect x="467" y="364" width="66" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
-	<line x1="467" y1="389" x2="533" y2="389" stroke="#4393c3" stroke-width="1"/>
-	<text x="474" y="381.7" fill="#000000" font-family="Verdana" font-size="12">HASONE</text>
-</g>
-
-<!-- Association HASROLE -->
-<line x1="389" y1="389" x2="389" y2="515" stroke="#4393c3" stroke-width="2"/>
-<text x="394.0" y="482" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
-<line x1="500" y1="515" x2="389" y2="515" stroke="#4393c3" stroke-width="2"/>
-<text x="451" y="532.0" fill="#b2182b" font-family="Verdana" font-size="12">1,N</text>
-<g id="association-HASROLE">
-	<path d="M 412 490 a 14 14 90 0 1 14 14 V 515 h -74 V 504 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
-	<path d="M 426 515.0 v 11 a 14 14 90 0 1 -14 14 H 366 a 14 14 90 0 1 -14 -14 V 515.0 H 74" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
-	<rect x="352" y="490" width="74" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
-	<line x1="352" y1="515" x2="426" y2="515" stroke="#4393c3" stroke-width="1"/>
-	<text x="359" y="507.7" fill="#000000" font-family="Verdana" font-size="12">HASROLE</text>
-</g>
-
-<!-- Association HASONE -->
-<line x1="225" y1="212" x2="389" y2="212" stroke="#4393c3" stroke-width="2"/>
-<text x="278" y="229.0" fill="#b2182b" font-family="Verdana" font-size="12">1,N</text>
-<line x1="500" y1="212" x2="389" y2="212" stroke="#4393c3" stroke-width="2"/>
-<text x="429" y="229.0" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
-<g id="association-HASONE">
-	<path d="M 408 187 a 14 14 90 0 1 14 14 V 212 h -66 V 201 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
-	<path d="M 422 212.0 v 11 a 14 14 90 0 1 -14 14 H 370 a 14 14 90 0 1 -14 -14 V 212.0 H 66" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
-	<rect x="356" y="187" width="66" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
-	<line x1="356" y1="212" x2="422" y2="212" stroke="#4393c3" stroke-width="1"/>
-	<text x="363" y="204.7" fill="#000000" font-family="Verdana" font-size="12">HASONE</text>
+	<path d="M 497 186 a 14 14 90 0 1 14 14 V 211 h -74 V 200 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
+	<path d="M 511 211.0 v 11 a 14 14 90 0 1 -14 14 H 451 a 14 14 90 0 1 -14 -14 V 211.0 H 74" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
+	<rect x="437" y="186" width="74" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
+	<line x1="437" y1="211" x2="511" y2="211" stroke="#4393c3" stroke-width="1"/>
+	<text x="444" y="203.7" fill="#000000" font-family="Verdana" font-size="12">POSSEDE</text>
 </g>
 
 <!-- Association CRÉE -->
-<line x1="225" y1="212" x2="225" y2="389" stroke="#4393c3" stroke-width="2"/>
-<text x="230.0" y="288" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
-<line x1="389" y1="389" x2="225" y2="389" stroke="#4393c3" stroke-width="2"/>
-<text x="328" y="381.0" fill="#b2182b" font-family="Verdana" font-size="12">1,N</text>
+<line x1="474" y1="320" x2="310" y2="85" stroke="#4393c3" stroke-width="2"/>
+<text x="432.506443043" y="253" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<line x1="180" y1="85" x2="310" y2="85" stroke="#4393c3" stroke-width="2"/>
+<text x="219" y="102.0" fill="#b2182b" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-CRÉE">
-	<path d="M 235 364 a 14 14 90 0 1 14 14 V 389 h -48 V 378 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
-	<path d="M 249 389.0 v 11 a 14 14 90 0 1 -14 14 H 215 a 14 14 90 0 1 -14 -14 V 389.0 H 48" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
-	<rect x="201" y="364" width="48" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
-	<line x1="201" y1="389" x2="249" y2="389" stroke="#4393c3" stroke-width="1"/>
-	<text x="208" y="381.7" fill="#000000" font-family="Verdana" font-size="12">CRÉE</text>
+	<path d="M 320 60 a 14 14 90 0 1 14 14 V 85 h -48 V 74 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
+	<path d="M 334 85.0 v 11 a 14 14 90 0 1 -14 14 H 300 a 14 14 90 0 1 -14 -14 V 85.0 H 48" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
+	<rect x="286" y="60" width="48" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
+	<line x1="286" y1="85" x2="334" y2="85" stroke="#4393c3" stroke-width="1"/>
+	<text x="293" y="77.7" fill="#000000" font-family="Verdana" font-size="12">CRÉE</text>
+</g>
+
+<!-- Association HAS-TRAINING -->
+<line x1="310" y1="211" x2="310" y2="320" stroke="#4393c3" stroke-width="2"/>
+<text x="315.0" y="287" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<line x1="474" y1="320" x2="310" y2="320" stroke="#4393c3" stroke-width="2"/>
+<text x="399" y="337.0" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-HAS-TRAINING">
+	<path d="M 350 295 a 14 14 90 0 1 14 14 V 320 h -108 V 309 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
+	<path d="M 364 320.0 v 11 a 14 14 90 0 1 -14 14 H 270 a 14 14 90 0 1 -14 -14 V 320.0 H 108" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
+	<rect x="256" y="295" width="108" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
+	<line x1="256" y1="320" x2="364" y2="320" stroke="#4393c3" stroke-width="1"/>
+	<text x="263" y="312.7" fill="#000000" font-family="Verdana" font-size="12">HAS-TRAINING</text>
+</g>
+
+<!-- Association HAS-USER -->
+<line x1="310" y1="211" x2="180" y2="211" stroke="#4393c3" stroke-width="2"/>
+<text x="227" y="203.0" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<line x1="180" y1="85" x2="180" y2="211" stroke="#4393c3" stroke-width="2"/>
+<text x="185.0" y="178" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-HAS-USER">
+	<path d="M 206 186 a 14 14 90 0 1 14 14 V 211 h -80 V 200 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
+	<path d="M 220 211.0 v 11 a 14 14 90 0 1 -14 14 H 154 a 14 14 90 0 1 -14 -14 V 211.0 H 80" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
+	<rect x="140" y="186" width="80" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
+	<line x1="140" y1="211" x2="220" y2="211" stroke="#4393c3" stroke-width="1"/>
+	<text x="147" y="203.7" fill="#000000" font-family="Verdana" font-size="12">HAS-USER</text>
+</g>
+
+<!-- Association HASROLE -->
+<line x1="180" y1="85" x2="68" y2="85" stroke="#4393c3" stroke-width="2"/>
+<text x="120" y="77.0" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<line x1="68" y1="211" x2="68" y2="85" stroke="#4393c3" stroke-width="2"/>
+<text x="73.0" y="169" fill="#b2182b" font-family="Verdana" font-size="12">1,N</text>
+<g id="association-HASROLE">
+	<path d="M 91 60 a 14 14 90 0 1 14 14 V 85 h -74 V 74 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
+	<path d="M 105 85.0 v 11 a 14 14 90 0 1 -14 14 H 45 a 14 14 90 0 1 -14 -14 V 85.0 H 74" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
+	<rect x="31" y="60" width="74" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
+	<line x1="31" y1="85" x2="105" y2="85" stroke="#4393c3" stroke-width="1"/>
+	<text x="38" y="77.7" fill="#000000" font-family="Verdana" font-size="12">HASROLE</text>
+</g>
+
+<!-- Association HASONE2 -->
+<line x1="180" y1="85" x2="68" y2="320" stroke="#4393c3" stroke-width="2"/>
+<text x="119" y="152.069332376" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<line x1="68" y1="446" x2="68" y2="320" stroke="#4393c3" stroke-width="2"/>
+<text x="42.0" y="362" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-HASONE2">
+	<path d="M 87 295 a 14 14 90 0 1 14 14 V 320 h -66 V 309 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
+	<path d="M 101 320.0 v 11 a 14 14 90 0 1 -14 14 H 49 a 14 14 90 0 1 -14 -14 V 320.0 H 66" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
+	<rect x="35" y="295" width="66" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
+	<line x1="35" y1="320" x2="101" y2="320" stroke="#4393c3" stroke-width="1"/>
+	<text x="42" y="312.7" fill="#000000" font-family="Verdana" font-size="12">HASONE</text>
 </g>
 
 <!-- Association HAS -->
-<line x1="500" y1="212" x2="500" y2="60" stroke="#4393c3" stroke-width="2"/>
-<text x="505.0" y="128" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
-<line x1="389" y1="60" x2="500" y2="60" stroke="#4393c3" stroke-width="2"/>
-<text x="438" y="77.0" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<line x1="68" y1="446" x2="180" y2="446" stroke="#4393c3" stroke-width="2"/>
+<text x="132" y="463.0" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<line x1="310" y1="446" x2="180" y2="446" stroke="#4393c3" stroke-width="2"/>
+<text x="239" y="463.0" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
 <g id="association-HAS">
-	<path d="M 506 35 a 14 14 90 0 1 14 14 V 60 h -40 V 49 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
-	<path d="M 520 60.0 v 11 a 14 14 90 0 1 -14 14 H 494 a 14 14 90 0 1 -14 -14 V 60.0 H 40" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
-	<rect x="480" y="35" width="40" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
-	<line x1="480" y1="60" x2="520" y2="60" stroke="#4393c3" stroke-width="1"/>
-	<text x="487" y="52.7" fill="#000000" font-family="Verdana" font-size="12">HAS</text>
+	<path d="M 186 421 a 14 14 90 0 1 14 14 V 446 h -40 V 435 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
+	<path d="M 200 446.0 v 11 a 14 14 90 0 1 -14 14 H 174 a 14 14 90 0 1 -14 -14 V 446.0 H 40" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
+	<rect x="160" y="421" width="40" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
+	<line x1="160" y1="446" x2="200" y2="446" stroke="#4393c3" stroke-width="1"/>
+	<text x="167" y="438.7" fill="#000000" font-family="Verdana" font-size="12">HAS</text>
+</g>
+
+<!-- Association TRAINING-HAS-EXERCICE -->
+<line x1="474" y1="320" x2="474" y2="446" stroke="#4393c3" stroke-width="2"/>
+<text x="479.0" y="396" fill="#b2182b" font-family="Verdana" font-size="12">N,N</text>
+<line x1="310" y1="446" x2="474" y2="446" stroke="#4393c3" stroke-width="2"/>
+<text x="359" y="463.0" fill="#b2182b" font-family="Verdana" font-size="12">N,N</text>
+<g id="association-TRAINING-HAS-EXERCICE">
+	<path d="M 547 421 a 14 14 90 0 1 14 14 V 446 h -174 V 435 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
+	<path d="M 561 446.0 v 11 a 14 14 90 0 1 -14 14 H 401 a 14 14 90 0 1 -14 -14 V 446.0 H 174" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
+	<rect x="387" y="421" width="174" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
+	<line x1="387" y1="446" x2="561" y2="446" stroke="#4393c3" stroke-width="1"/>
+	<text x="394" y="438.7" fill="#000000" font-family="Verdana" font-size="12">TRAINING-HAS-EXERCICE</text>
+	<text x="394" y="463.8" fill="#000000" font-family="Verdana" font-size="12">#training_id #exercice_id</text>
+</g>
+
+<!-- Association HAS2 -->
+<line x1="310" y1="211" x2="180" y2="320" stroke="#4393c3" stroke-width="2"/>
+<text x="226" y="256.988027315" fill="#b2182b" font-family="Verdana" font-size="12">1,N</text>
+<line x1="68" y1="446" x2="180" y2="320" stroke="#4393c3" stroke-width="2"/>
+<text x="132" y="390.141214588" fill="#b2182b" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-HAS2">
+	<path d="M 186 295 a 14 14 90 0 1 14 14 V 320 h -40 V 309 a 14 14 90 0 1 14 -14" fill="#92c5de" stroke="#92c5de" stroke-width="0"/>
+	<path d="M 200 320.0 v 11 a 14 14 90 0 1 -14 14 H 174 a 14 14 90 0 1 -14 -14 V 320.0 H 40" fill="#d1e5f0" stroke="#d1e5f0" stroke-width="0"/>
+	<rect x="160" y="295" width="40" height="50" fill="none" rx="14" stroke="#4393c3" stroke-width="2"/>
+	<line x1="160" y1="320" x2="200" y2="320" stroke="#4393c3" stroke-width="1"/>
+	<text x="167" y="312.7" fill="#000000" font-family="Verdana" font-size="12">HAS</text>
 </g>
 
 <!-- Entity CATEGORY -->
 <g id="entity-CATEGORY">
 	<g id="frame-CATEGORY">
-		<rect x="27" y="26" width="78" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
-		<rect x="27" y="51.0" width="78" height="43" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
-		<rect x="27" y="26" width="78" height="68" fill="none" stroke="#d6604d" stroke-width="2"/>
-		<line x1="27" y1="51" x2="105" y2="51" stroke="#d6604d" stroke-width="1"/>
+		<rect x="435" y="51" width="78" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="435" y="76.0" width="78" height="43" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="435" y="51" width="78" height="68" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="435" y1="76" x2="513" y2="76" stroke="#d6604d" stroke-width="1"/>
 	</g>
-	<text x="32" y="43.7" fill="#000000" font-family="Verdana" font-size="12">CATEGORY</text>
-	<text x="32" y="68.8" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="32" y1="71" x2="44" y2="71" stroke="#000000" stroke-width="1"/>
-	<text x="32" y="85.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<text x="440" y="68.7" fill="#000000" font-family="Verdana" font-size="12">CATEGORY</text>
+	<text x="440" y="93.8" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="440" y1="96" x2="452" y2="96" stroke="#000000" stroke-width="1"/>
+	<text x="440" y="110.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
 </g>
 
 <!-- Entity TRAINING -->
 <g id="entity-TRAINING">
 	<g id="frame-TRAINING">
-		<rect x="177" y="153" width="96" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
-		<rect x="177" y="178.0" width="96" height="93" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
-		<rect x="177" y="153" width="96" height="118" fill="none" stroke="#d6604d" stroke-width="2"/>
-		<line x1="177" y1="178" x2="273" y2="178" stroke="#d6604d" stroke-width="1"/>
+		<rect x="426" y="261" width="96" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="426" y="286.0" width="96" height="93" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="426" y="261" width="96" height="118" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="426" y1="286" x2="522" y2="286" stroke="#d6604d" stroke-width="1"/>
 	</g>
-	<text x="194" y="170.7" fill="#000000" font-family="Verdana" font-size="12">TRAINING</text>
-	<text x="182" y="195.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="182" y1="198" x2="194" y2="198" stroke="#000000" stroke-width="1"/>
-	<text x="182" y="212.8" fill="#000000" font-family="Verdana" font-size="12">#user_id</text>
-	<text x="182" y="229.8" fill="#000000" font-family="Verdana" font-size="12">#category_id</text>
-	<text x="182" y="246.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
-	<text x="182" y="263.8" fill="#000000" font-family="Verdana" font-size="12">is_benchmark</text>
+	<text x="443" y="278.7" fill="#000000" font-family="Verdana" font-size="12">TRAINING</text>
+	<text x="431" y="303.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="431" y1="306" x2="443" y2="306" stroke="#000000" stroke-width="1"/>
+	<text x="431" y="320.8" fill="#000000" font-family="Verdana" font-size="12">#user_id</text>
+	<text x="431" y="337.8" fill="#000000" font-family="Verdana" font-size="12">#category_id</text>
+	<text x="431" y="354.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<text x="431" y="371.8" fill="#000000" font-family="Verdana" font-size="12">is_benchmark</text>
 </g>
 
 <!-- Entity EXERCICE -->
 <g id="entity-EXERCICE">
 	<g id="frame-EXERCICE">
-		<rect x="345" y="9" width="88" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
-		<rect x="345" y="34.0" width="88" height="77" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
-		<rect x="345" y="9" width="88" height="102" fill="none" stroke="#d6604d" stroke-width="2"/>
-		<line x1="345" y1="34" x2="433" y2="34" stroke="#d6604d" stroke-width="1"/>
+		<rect x="266" y="395" width="88" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="266" y="420.0" width="88" height="77" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="266" y="395" width="88" height="102" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="266" y1="420" x2="354" y2="420" stroke="#d6604d" stroke-width="1"/>
 	</g>
-	<text x="358" y="26.7" fill="#000000" font-family="Verdana" font-size="12">EXERCICE</text>
-	<text x="350" y="51.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="350" y1="54" x2="362" y2="54" stroke="#000000" stroke-width="1"/>
-	<text x="350" y="68.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
-	<text x="350" y="85.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
-	<text x="350" y="102.8" fill="#000000" font-family="Verdana" font-size="12">isBenchmark</text>
+	<text x="279" y="412.7" fill="#000000" font-family="Verdana" font-size="12">EXERCICE</text>
+	<text x="271" y="437.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="271" y1="440" x2="283" y2="440" stroke="#000000" stroke-width="1"/>
+	<text x="271" y="454.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="271" y="471.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
+	<text x="271" y="488.8" fill="#000000" font-family="Verdana" font-size="12">isBenchmark</text>
 </g>
 
 <!-- Entity ROLE -->
 <g id="entity-ROLE">
 	<g id="frame-ROLE">
-		<rect x="478" y="481" width="44" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
-		<rect x="478" y="506.0" width="44" height="43" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
-		<rect x="478" y="481" width="44" height="68" fill="none" stroke="#d6604d" stroke-width="2"/>
-		<line x1="478" y1="506" x2="522" y2="506" stroke="#d6604d" stroke-width="1"/>
+		<rect x="46" y="177" width="44" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="46" y="202.0" width="44" height="43" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="46" y="177" width="44" height="68" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="46" y1="202" x2="90" y2="202" stroke="#d6604d" stroke-width="1"/>
 	</g>
-	<text x="483" y="498.7" fill="#000000" font-family="Verdana" font-size="12">ROLE</text>
-	<text x="483" y="523.8" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="483" y1="526" x2="495" y2="526" stroke="#000000" stroke-width="1"/>
-	<text x="483" y="540.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
-</g>
-
-<!-- Entity RESULT -->
-<g id="entity-RESULT">
-	<g id="frame-RESULT">
-		<rect x="455" y="136" width="90" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
-		<rect x="455" y="161.0" width="90" height="127" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
-		<rect x="455" y="136" width="90" height="152" fill="none" stroke="#d6604d" stroke-width="2"/>
-		<line x1="455" y1="161" x2="545" y2="161" stroke="#d6604d" stroke-width="1"/>
-	</g>
-	<text x="476" y="153.7" fill="#000000" font-family="Verdana" font-size="12">RESULT</text>
-	<text x="460" y="178.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="460" y1="181" x2="472" y2="181" stroke="#000000" stroke-width="1"/>
-	<text x="460" y="195.7" fill="#000000" font-family="Verdana" font-size="12">#user_id</text>
-	<text x="460" y="212.8" fill="#000000" font-family="Verdana" font-size="12">#exercice_id</text>
-	<text x="460" y="229.8" fill="#000000" font-family="Verdana" font-size="12">#training_id</text>
-	<text x="460" y="246.8" fill="#000000" font-family="Verdana" font-size="12">duration</text>
-	<text x="460" y="263.8" fill="#000000" font-family="Verdana" font-size="12">weight</text>
-	<text x="460" y="280.8" fill="#000000" font-family="Verdana" font-size="12">reps</text>
-</g>
-
-<!-- Entity TRAINING-DONE -->
-<g id="entity-TRAINING-DONE">
-	<g id="frame-TRAINING-DONE">
-		<rect x="9" y="456" width="114" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
-		<rect x="9" y="481.0" width="114" height="93" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
-		<rect x="9" y="456" width="114" height="118" fill="none" stroke="#d6604d" stroke-width="2"/>
-		<line x1="9" y1="481" x2="123" y2="481" stroke="#d6604d" stroke-width="1"/>
-	</g>
-	<text x="14" y="473.7" fill="#000000" font-family="Verdana" font-size="12">TRAINING-DONE</text>
-	<text x="14" y="498.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="14" y1="501" x2="26" y2="501" stroke="#000000" stroke-width="1"/>
-	<text x="14" y="515.8" fill="#000000" font-family="Verdana" font-size="12">#user_id</text>
-	<text x="14" y="532.8" fill="#000000" font-family="Verdana" font-size="12">#training_id</text>
-	<text x="14" y="549.8" fill="#000000" font-family="Verdana" font-size="12">duration</text>
-	<text x="14" y="566.8" fill="#000000" font-family="Verdana" font-size="12">created_at</text>
+	<text x="51" y="194.7" fill="#000000" font-family="Verdana" font-size="12">ROLE</text>
+	<text x="51" y="219.8" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="51" y1="222" x2="63" y2="222" stroke="#000000" stroke-width="1"/>
+	<text x="51" y="236.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
 </g>
 
 <!-- Entity USER -->
 <g id="entity-USER">
 	<g id="frame-USER">
-		<rect x="355" y="313" width="68" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
-		<rect x="355" y="338.0" width="68" height="127" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
-		<rect x="355" y="313" width="68" height="152" fill="none" stroke="#d6604d" stroke-width="2"/>
-		<line x1="355" y1="338" x2="423" y2="338" stroke="#d6604d" stroke-width="1"/>
+		<rect x="146" y="9" width="68" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="146" y="34.0" width="68" height="127" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="146" y="9" width="68" height="152" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="146" y1="34" x2="214" y2="34" stroke="#d6604d" stroke-width="1"/>
 	</g>
-	<text x="372" y="330.7" fill="#000000" font-family="Verdana" font-size="12">USER</text>
-	<text x="360" y="355.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
-	<line x1="360" y1="358" x2="372" y2="358" stroke="#000000" stroke-width="1"/>
-	<text x="360" y="372.7" fill="#000000" font-family="Verdana" font-size="12">#role_id</text>
-	<text x="360" y="389.8" fill="#000000" font-family="Verdana" font-size="12">pseudo</text>
-	<text x="360" y="406.8" fill="#000000" font-family="Verdana" font-size="12">prenom</text>
-	<text x="360" y="423.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
-	<text x="360" y="440.8" fill="#000000" font-family="Verdana" font-size="12">email</text>
-	<text x="360" y="457.8" fill="#000000" font-family="Verdana" font-size="12">password</text>
+	<text x="163" y="26.7" fill="#000000" font-family="Verdana" font-size="12">USER</text>
+	<text x="151" y="51.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="151" y1="54" x2="163" y2="54" stroke="#000000" stroke-width="1"/>
+	<text x="151" y="68.7" fill="#000000" font-family="Verdana" font-size="12">#role_id</text>
+	<text x="151" y="85.8" fill="#000000" font-family="Verdana" font-size="12">pseudo</text>
+	<text x="151" y="102.8" fill="#000000" font-family="Verdana" font-size="12">prenom</text>
+	<text x="151" y="119.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="151" y="136.8" fill="#000000" font-family="Verdana" font-size="12">email</text>
+	<text x="151" y="153.8" fill="#000000" font-family="Verdana" font-size="12">password</text>
+</g>
+
+<!-- Entity TRAINING-DONE -->
+<g id="entity-TRAINING-DONE">
+	<g id="frame-TRAINING-DONE">
+		<rect x="253" y="152" width="114" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="253" y="177.0" width="114" height="93" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="253" y="152" width="114" height="118" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="253" y1="177" x2="367" y2="177" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="258" y="169.7" fill="#000000" font-family="Verdana" font-size="12">TRAINING-DONE</text>
+	<text x="258" y="194.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="258" y1="197" x2="270" y2="197" stroke="#000000" stroke-width="1"/>
+	<text x="258" y="211.8" fill="#000000" font-family="Verdana" font-size="12">#user_id</text>
+	<text x="258" y="228.8" fill="#000000" font-family="Verdana" font-size="12">#training_id</text>
+	<text x="258" y="245.8" fill="#000000" font-family="Verdana" font-size="12">duration</text>
+	<text x="258" y="262.8" fill="#000000" font-family="Verdana" font-size="12">created_at</text>
+</g>
+
+<!-- Entity RESULT -->
+<g id="entity-RESULT">
+	<g id="frame-RESULT">
+		<rect x="9" y="370" width="118" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="9" y="395.0" width="118" height="127" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="9" y="370" width="118" height="152" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="9" y1="395" x2="127" y2="395" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="44" y="387.7" fill="#000000" font-family="Verdana" font-size="12">RESULT</text>
+	<text x="14" y="412.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="14" y1="415" x2="26" y2="415" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="429.7" fill="#000000" font-family="Verdana" font-size="12">#user_id</text>
+	<text x="14" y="446.8" fill="#000000" font-family="Verdana" font-size="12">#exercice_id</text>
+	<text x="14" y="463.8" fill="#000000" font-family="Verdana" font-size="12">#trainingDone_id</text>
+	<text x="14" y="480.8" fill="#000000" font-family="Verdana" font-size="12">duration</text>
+	<text x="14" y="497.8" fill="#000000" font-family="Verdana" font-size="12">weight</text>
+	<text x="14" y="514.8" fill="#000000" font-family="Verdana" font-size="12">reps</text>
 </g>
 </svg>

@@ -1,9 +1,9 @@
 const {DataTypes, Model} = require('sequelize');
 const sequelize = require('../db');
 
-class Training extends Model {};
+class Training extends Model {}
 
-Model.init({
+Training.init({
   name: DataTypes.TEXT,
   isBenchmark: DataTypes.BOOLEAN,
 }, {

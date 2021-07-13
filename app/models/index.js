@@ -38,19 +38,10 @@ Result.belongsTo(Exercice, {
   foreignKey: 'exerciceId',
   as: 'exercice'
 })
-/*----------------------------------*/
-Training.hasMany(Result, {
-  foreignKey: 'trainingId',
-  as: 'results'
-})
-Result.belongsTo(Training, {
-  foreignKey: 'trainingId',
-  as: 'training'
-})
 /*--------------------------------*/
 
 Training.hasMany(TrainingDone, {
-  as: 'trainings_done',
+  as: 'trainingsDoneChild',
   foreignKey: 'trainingId'
 });
 TrainingDone.belongsTo(Training, {
@@ -60,7 +51,7 @@ TrainingDone.belongsTo(Training, {
 
 /*----------------------------------*/
 User.hasMany(Training, {
-  as: 'trainings_created',
+  as: 'createdTrainings',
   foreignKey: 'userId'
 });
 
@@ -70,11 +61,11 @@ Training.belongsTo(User, {
 });
 /*------------------------------------*/
 User.hasMany(Result, {
-  foreignKey: userId,
+  foreignKey: 'userId',
   as: 'results'
 })
 Result.belongsTo(User, {
-  foreignKey: userId,
+  foreignKey: 'userId',
   as: 'user'
 })
 /*-----------------------------------*/
@@ -89,13 +80,22 @@ User.belongsTo(Role, {
 });
 /*----------------------------------*/
 User.hasMany(TrainingDone, {
-  as: 'trainings_done',
+  as: 'trainingsDone',
   foreignKey: 'userId'
 });
 
 TrainingDone.belongsTo(User, {
   as: 'user',
   foreignKey: 'userId'
+})
+/*----------------------------------*/
+TrainingDone.hasMany(Result, {
+  as: 'results',
+  foreignKey: 'trainingDoneId'
+});
+Result.belongsTo(TrainingDone, {
+  as: 'trainingDoneOrigin',
+  foreignKey: 'trainingDoneId'
 })
 /*------------------------------------*/
 module.exports = {
@@ -104,5 +104,6 @@ module.exports = {
   Exercice, 
   Role, 
   User, 
-  TrainingDone
+  TrainingDone,
+  Result
   };

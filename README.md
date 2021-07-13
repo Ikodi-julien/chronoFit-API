@@ -25,14 +25,37 @@ Les différents utilisateurs :
 
 | En tant que ... | Je veux ... | Afin de ...|
 | :---| :---| :---|
-| V1 - Utilisateur non identifié | Avoir accès à des entrainements benchmark | Pouvoir tester l'application |
-| V1 - Utilisateur non identifié | Pouvoir créer un compte | Avoir accès aux autres fonctionnalités |
+| V1 - Utilisateur non identifié | avoir accès à un menu contenant des liens vers les différentes parties de l'application | choisir ce que je veux faire
+| V1 - Utilisateur non identifié | Avoir accès à des entrainements benchmark, les "Girls" | Pouvoir tester l'application |
+| V1 - Utilisateur non identifié | Pouvoir créer un compte | avoir des identifiants pour me logguer
+| V1 - Utilisateur non identifié | Pouvoir me logguer avec mes identifiants | Avoir accès aux autres fonctionnalités |
+| V1 - Utilisateur identifié | avoir accès à une page profil | Pouvoir modifier mes infos personnelles |
 | V1 - Utilisateur identifié | Pouvoir créer des entrainements | Avoir des entrainements personnalisés |
-| V1 - Utilisateur identifié | Enregistrer une trame d'entrainement en local | Pouvoir refaire un entrainement que j'ai créé |
-| V2 - Utilisateur identifié | Enregistrer mes performances lors d'un entrainement benchmark | Pouvoir juger de ma progression |
+| V1 - Utilisateur identifié | Enregistrer une trame d'entrainement | Pouvoir refaire un entrainement que j'ai créé |
+| V2 - Utilisateur identifié | Enregistrer mes performances lors d'un entrainement benchmark | garder un enregistrement |
 | V2 - Utilisateur identifié | Avoir une vue graphique de l'évolution de mes performances sur les entrainement benchmark et exercices benchmarks | Pouvoir juger de ma progression |
 | V2 - Coach | Pouvoir créer un entrainement benchMark (ou non) | Proposer un suivi personnalisé |
 | V2 - Coach | Pouvoir assigner un entrainement à un utilisateur | Proposer un suivi personnalisé |
+
+Afin de créer un entrainement
+
+| En tant que ... | Je veux ... |
+| :---| :---|
+| V1 - Utilisateur identifié | Pouvoir ajouter un exercice 
+| V1 - Utilisateur identifié | Pouvoir supprimer un exercice 
+| V1 - Utilisateur identifié | Pouvoir préciser pour chaque exercice : son nom, une description, le nombre de rounds, de répétitions, la durée, le poids |
+| V1 - Utilisateur identifié | Pouvoir grouper plusieurs exercices ensemble | 
+| V1 - Utilisateur identifié | Pouvoir dégrouper un groupe d'exercices | 
+| V1 - Utilisateur identifié | Pouvoir déplacer les exercices en drag and drop dans un groupe | 
+| V1 - Utilisateur identifié | Pouvoir déplacer les groupes en drag and drop dans la trame d'entrainements | 
+
+Afin de me chronométrer
+
+| En tant que ... | Je veux ... |
+| :---| :---|
+| Utilisateur | Avoir et enregistrer le temps passé à l'entrainement, un chrono général |
+| Utilisateur | Avoir et enregistrer le temps passé sur chaque exercice, le chrono suivant se déclenche sur action utilisateur ou fin de chrono d'exo précédent |
+| Utilisateur | Avoir et enregistrer le temps passé pour chaque groupe d'exercice |
 
 ## MCD
 
@@ -92,5 +115,5 @@ Communique avec une API REST :
 
 _Node + Express + Sequelize + postgreSQL_
 
-Développement en local puis hébergement de l'API chez AWS, du Front chez _Quillers.fr_, voir DNS Gandi pour chronofit-react.ikodi.eu
+Développement en local puis quand il sera temps, hébergement chez Gandi sur instance Node.
 

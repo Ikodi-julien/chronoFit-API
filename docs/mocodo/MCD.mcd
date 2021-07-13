@@ -1,0 +1,19 @@
+HASROLE, 11 USER, 1N ROLE
+USER: id, #role_id, pseudo, prenom, nom, email, password
+CRÉE, 11 TRAINING, 1N USER
+CATEGORY: id, name
+
+ROLE: id, nom
+HAS-USER, 11 TRAINING-DONE, ON USER
+TRAINING-DONE: id, #user_id, #training_id, duration, created_at
+POSSEDE, 1N CATEGORY, 11 TRAINING
+
+HASONE2, 0N USER, 11 RESULT
+HAS2, 1N TRAINING-DONE, 11 RESULT
+HAS-TRAINING, 11 TRAINING-DONE, 0N TRAINING
+TRAINING: id, #user_id, #category_id, name, is_benchmark
+
+RESULT: id, #user_id, #exercice_id, #trainingDone_id, duration, weight, reps
+HAS, 11 RESULT, 0N EXERCICE
+EXERCICE: id, nom, description, isBenchmark
+TRAINING-HAS-EXERCICE, NN TRAINING, NN EXERCICE : #training_id #exercice_id

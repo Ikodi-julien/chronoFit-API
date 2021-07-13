@@ -3,13 +3,13 @@ const sequelize = require('../db');
 
 class Result extends Model {};
 
-Model.init({
+Result.init({
   duration: DataTypes.INTEGER,
   weight: DataTypes.INTEGER,
   reps: DataTypes.INTEGER,
 }, {
   sequelize,
-  tableName: 'training'
+  tableName: 'result'
 })
 
 module.exports = Result;

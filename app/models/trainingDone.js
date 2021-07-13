@@ -7,7 +7,7 @@ TrainingDone.init({
   duration: DataTypes.INTEGER
 }, {
   sequelize,
-  tableName: 'training_done'
+  tableName: 'trainingDone'
 })
 
 module.exports = TrainingDone;
