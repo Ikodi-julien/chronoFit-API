@@ -30,7 +30,7 @@ Les différents utilisateurs :
 | V1 - Utilisateur non identifié | Pouvoir créer un compte | avoir des identifiants pour me logguer
 | V1 - Utilisateur non identifié | Pouvoir me logguer avec mes identifiants | Avoir accès aux autres fonctionnalités |
 | V1 - Utilisateur identifié | avoir accès à une page profil | Pouvoir modifier mes infos personnelles |
-| V1 - Utilisateur identifié | Pouvoir créer des entrainements | Avoir des entrainements personnalisés |
+| V1 - Utilisateur identifié | Pouvoir créer des entrainements (cf détails ci-dessous)| Avoir des entrainements personnalisés |
 | V1 - Utilisateur identifié | Enregistrer une trame d'entrainement | Pouvoir refaire un entrainement que j'ai créé |
 | V2 - Utilisateur identifié | Enregistrer mes performances lors d'un entrainement benchmark | garder un enregistrement |
 | V2 - Utilisateur identifié | Avoir une vue graphique de l'évolution de mes performances sur les entrainement benchmark et exercices benchmarks | Pouvoir juger de ma progression |

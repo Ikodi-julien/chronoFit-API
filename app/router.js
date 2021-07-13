@@ -4,6 +4,7 @@ const categoryCtrl = require('./controller/categoryCtrl');
 const trainingTemplateCtrl = require('./controller/trainingTemplateCtrl');
 const trainingDoneCtrl = require('./controller/trainingDoneCtrl');
 const userCtrl = require('./controller/userCtrl');
+const exerciceCtrl = require('./controller/exerciceCtrl');
 
 /*------------------------------*/
 const router= express.Router();
@@ -17,34 +18,49 @@ router.get('/', (req, res) => {
 /* CATEGORY */
 router.get('/categories', categoryCtrl.getAll);
 router.get('/category/:id', categoryCtrl.getOne);
-router.post('/categories', categoryCtrl.create);
-router.patch('/categories/:id', categoryCtrl.update);
-// router.put('/categories/:id?', categoryCtrl.createOrModify);
-router.delete('/categories/:id', categoryCtrl.delete);
+router.post('/category', categoryCtrl.create);
+router.patch('/category/:id', categoryCtrl.update);
+router.delete('/category/:id', categoryCtrl.delete);
 
 /* TRAINING */
 router.get('/trainings', trainingTemplateCtrl.getAll);
-router.get('/trainings/:id', trainingTemplateCtrl.getOne);
-router.post('/trainings', trainingTemplateCtrl.create);
-router.patch('/trainings/:id', trainingTemplateCtrl.update);
-router.delete('/trainings/:id', trainingTemplateCtrl.delete);
+router.get('/training/:id', trainingTemplateCtrl.getOne);
+router.post('/training', trainingTemplateCtrl.create);
+router.patch('/training/:id', trainingTemplateCtrl.update);
+router.delete('/training/:id', trainingTemplateCtrl.delete);
 
 /* USER */
 router.get('/users', userCtrl.getAll);
 router.get('/user/:id', userCtrl.getOne);
-router.post('/users', userCtrl.create);
-router.patch('/users/:id', userCtrl.update);
-router.delete('/users/:id', userCtrl.delete);
+router.post('/user', userCtrl.create);
+// TODO a middleware for admin access only
+router.patch('/user/:id', userCtrl.update);
+router.delete('/user/:id', userCtrl.delete);
+// TODO a middleware for "me" access
+// router.patch('/me', userCtrl.updateMe);
+// router.delete('/me', userCtrl.deleteMe);
 
 /* TRAINING DONE */
 router.get('/trainingsDone', trainingDoneCtrl.getAll);
-router.get('/trainingsDone/:id', trainingDoneCtrl.getOne);
-router.post('/trainingsDone', trainingDoneCtrl.create);
-router.patch('/trainingsDone/:id', trainingDoneCtrl.update);
-router.delete('/trainingsDone/:id', trainingDoneCtrl.delete);
+router.get('/trainingDone/:id', trainingDoneCtrl.getOne);
+router.post('/trainingDone', trainingDoneCtrl.create);
+router.patch('/trainingDone/:id', trainingDoneCtrl.update);
+router.delete('/trainingDone/:id', trainingDoneCtrl.delete);
 
 /* EXERCICE */
-/* ROLE */
+router.get('/exercice', exerciceCtrl.getAll);
+router.get('/exercice/:id', exerciceCtrl.getOne);
+router.post('/exercice', exerciceCtrl.create);
+router.patch('/exercice/:id', exerciceCtrl.update);
+router.delete('/exercice/:id', exerciceCtrl.delete);
+
+/* ROLE not available with a request*/
+/* RESULT */
+// router.get('/result', resultCtrl.getAll);
+// router.get('/result/:id', resultCtrl.getOne);
+// router.post('/result', resultCtrl.create);
+// router.patch('/result/:id', resultCtrl.update);
+// router.delete('/result/:id', resultCtrl.delete);
 
 /*------------------------------*/
 module.exports = router;

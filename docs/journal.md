@@ -2,6 +2,12 @@
 
 ## Journal de suivi des réalisations, 1ère entrée le 23/04/2021
 
+### Le 13/07/2021
+
+Le script de création de la base de données semble fonctionner. J'ai fait rapido un scrapper en python pour récupérer les définitions d'exercice d'un site. 
+Fait également les user stories plus détaillées et rempli le trello avec.
+Prochaine étape la mise à jour des endpoints et tests d'intégration.
+
 ### Le 11/07/2021
 
 J'espère être parvenu à une version définitive du MCD.
