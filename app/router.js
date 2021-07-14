@@ -48,7 +48,7 @@ router.patch('/trainingDone/:id', trainingDoneCtrl.update);
 router.delete('/trainingDone/:id', trainingDoneCtrl.delete);
 
 /* EXERCICE */
-router.get('/exercice', exerciceCtrl.getAll);
+router.get('/exercices', exerciceCtrl.getAll);
 router.get('/exercice/:id', exerciceCtrl.getOne);
 router.post('/exercice', exerciceCtrl.create);
 router.patch('/exercice/:id', exerciceCtrl.update);
@@ -56,11 +56,11 @@ router.delete('/exercice/:id', exerciceCtrl.delete);
 
 /* ROLE not available with a request*/
 /* RESULT */
-// router.get('/result', resultCtrl.getAll);
-// router.get('/result/:id', resultCtrl.getOne);
-// router.post('/result', resultCtrl.create);
-// router.patch('/result/:id', resultCtrl.update);
-// router.delete('/result/:id', resultCtrl.delete);
+router.get('/results', resultCtrl.getAll);
+router.get('/result/:id', resultCtrl.getOne);
+router.post('/result', resultCtrl.create);
+router.patch('/result/:id', resultCtrl.update);
+router.delete('/result/:id', resultCtrl.delete);
 
 /*------------------------------*/
 module.exports = router;

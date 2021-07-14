@@ -87,22 +87,4 @@ module.exports = {
       res.status(500).json(err.toString());
     }
   },
-
-  // createOrModify: async (req, res) => {
-  //   try {
-  //     let Exercice;
-  //     if (req.paramas.id) {
-  //       Exercice = await Exercice.findByPk(req.params.id);
-  //     }
-  //     if (Exercice) {
-  //       await ExerciceCtrl.modify(req, res);
-  //       return;
-  //     }
-  //     await ExerciceCtrl.create(req, res);
-
-  //   } catch(err) {
-  //     console.trace(err);
-  //     res.status(500).json(err.toString());
-  //   }
-  // },
 }
