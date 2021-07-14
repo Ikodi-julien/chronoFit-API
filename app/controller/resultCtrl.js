@@ -5,12 +5,7 @@ module.exports = {
 
     try {
       const results = await Result.findAll({
-          include: ['result', 'user', 'role', 
-            {
-              association: 'trainingDoneOrigin', 
-              include: ['training']
-            }
-          ]
+          include: ['exercice', 'user']
       });
       res.json(results);
       console.log(results);
@@ -26,9 +21,16 @@ module.exports = {
     const id = req.params.id;
 
     try {
-      const result = await Result.findByPk(id);
+      const result = await Result.findByPk(id, {
+        include: ['exercice', 'user', 
+          {
+            association: 'trainingDoneOrigin', 
+            include: ['training']
+          }
+        ]
+    });
 
-      result ? res.json(Result) : res.status(400).send(`Can't find result with id: ${id}`);
+      result ? res.json(result) : res.status(400).send(`Can't find result with id: ${id}`);
 
     } catch(err) {
       console.trace(err);

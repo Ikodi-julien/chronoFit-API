@@ -4,9 +4,11 @@ const exerciceTest = require('./exercice-test');
 const trainingTest = require('./training-test');
 const userTest = require('./user-test');
 const trainingDoneTest = require('./trainingDone-test');
+const resultTest = require('./result-test');
 
-// categoryTest.testCategory(url);
-// exerciceTest.testExercice(url);
-// trainingTest.testTraining(url);
-// userTest.testUser(url);
-// trainingDoneTest.testTrainingDone(url);
+categoryTest.testCategory(url);
+exerciceTest.testExercice(url);
+trainingTest.testTraining(url);
+userTest.testUser(url);
+trainingDoneTest.testTrainingDone(url);
+resultTest.testResult(url);
