@@ -6,6 +6,7 @@ const trainingDoneCtrl = require('./controller/trainingDoneCtrl');
 const userCtrl = require('./controller/userCtrl');
 const exerciceCtrl = require('./controller/exerciceCtrl');
 const resultCtrl = require('./controller/resultCtrl');
+const checkSlugId = require('./middlewares/checkSlugId');
 
 /*------------------------------*/
 const router= express.Router();
@@ -18,51 +19,51 @@ router.get('/', (req, res) => {
 
 /* CATEGORY user can only read categories*/
 router.get('/categories', categoryCtrl.getAll);// tested
-router.get('/category/:id', categoryCtrl.getOne);// tested
+router.get('/category/:id', checkSlugId, categoryCtrl.getOne);// tested
 // For now, 
 // router.post('/category', categoryCtrl.create);
 // router.patch('/category/:id', categoryCtrl.update);
 // router.delete('/category/:id', categoryCtrl.delete);
 
 /* TRAINING */
-router.get('/trainings', trainingTemplateCtrl.getAll);
-router.get('/training/:id', trainingTemplateCtrl.getOne);
-router.post('/training', trainingTemplateCtrl.create);
-router.patch('/training/:id', trainingTemplateCtrl.update);
-router.delete('/training/:id', trainingTemplateCtrl.delete);
+router.get('/trainings', trainingTemplateCtrl.getAll); // tested
+router.get('/training/:id', checkSlugId, trainingTemplateCtrl.getOne); // tested
+router.post('/training', trainingTemplateCtrl.create); // tested
+router.patch('/training/:id', checkSlugId, trainingTemplateCtrl.update); // tested
+router.delete('/training/:id', checkSlugId, trainingTemplateCtrl.delete); // tested
 
 /* USER */
-router.get('/users', userCtrl.getAll);
-router.get('/user/:id', userCtrl.getOne);
-router.post('/user', userCtrl.create);
+router.get('/users', userCtrl.getAll); // tested
+router.get('/user/:id', checkSlugId, userCtrl.getOne); // tested
+router.post('/user', userCtrl.create); // tested
 // TODO a middleware for admin access only
-router.patch('/user/:id', userCtrl.update);
-router.delete('/user/:id', userCtrl.delete);
+router.patch('/user/:id', checkSlugId, userCtrl.update); // tested
+router.delete('/user/:id', checkSlugId, userCtrl.delete); // tested
 // TODO a middleware for "me" access
 // router.patch('/me', userCtrl.updateMe);
 // router.delete('/me', userCtrl.deleteMe);
 
 /* TRAINING DONE */
-router.get('/trainingsDone', trainingDoneCtrl.getAll);
-router.get('/trainingDone/:id', trainingDoneCtrl.getOne);
-router.post('/trainingDone', trainingDoneCtrl.create);
-router.patch('/trainingDone/:id', trainingDoneCtrl.update);
-router.delete('/trainingDone/:id', trainingDoneCtrl.delete);
+router.get('/trainingsDone', trainingDoneCtrl.getAll); // tested
+router.get('/trainingDone/:id', checkSlugId, trainingDoneCtrl.getOne); // tested
+router.post('/trainingDone', trainingDoneCtrl.create); // tested
+router.patch('/trainingDone/:id', checkSlugId, trainingDoneCtrl.update); // tested
+router.delete('/trainingDone/:id', checkSlugId, trainingDoneCtrl.delete); // tested
 
 /* EXERCICE */
 router.get('/exercices', exerciceCtrl.getAll); // tested
-router.get('/exercice/:id', exerciceCtrl.getOne); //tested
+router.get('/exercice/:id', checkSlugId, exerciceCtrl.getOne); //tested
 router.post('/exercice', exerciceCtrl.create); //tested
-router.patch('/exercice/:id', exerciceCtrl.update); //tested
-router.delete('/exercice/:id', exerciceCtrl.delete); //tested
+router.patch('/exercice/:id', checkSlugId, exerciceCtrl.update); //tested
+router.delete('/exercice/:id', checkSlugId, exerciceCtrl.delete); //tested
 
 /* ROLE not available with a request*/
 /* RESULT */
 router.get('/results', resultCtrl.getAll);
-router.get('/result/:id', resultCtrl.getOne);
+router.get('/result/:id', checkSlugId, resultCtrl.getOne);
 router.post('/result', resultCtrl.create);
-router.patch('/result/:id', resultCtrl.update);
-router.delete('/result/:id', resultCtrl.delete);
+router.patch('/result/:id', checkSlugId, resultCtrl.update);
+router.delete('/result/:id', checkSlugId, resultCtrl.delete);
 
 /*------------------------------*/
 module.exports = router;

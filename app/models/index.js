@@ -28,7 +28,7 @@ Exercice.belongsToMany(Training, {
   otherKey: 'trainingId',
   as: 'trainings',
   through: 'training_has_exercices'
-})
+});
 /*----------------------------------*/
 Exercice.hasMany(Result, {
   foreignKey: 'exerciceId',
@@ -85,7 +85,7 @@ User.hasMany(TrainingDone, {
 });
 
 TrainingDone.belongsTo(User, {
-  as: 'user',
+  as: 'by',
   foreignKey: 'userId'
 })
 /*----------------------------------*/

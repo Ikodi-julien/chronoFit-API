@@ -5,9 +5,10 @@ module.exports = {
     
     try {
       const trainings = await TrainingDone.findAll({
-        include: ['training_origin', 'done_by']
+        include: ['by', {
+          association: 'training',
+          include: 'exercices'}]
       });
-      console
       res.json(trainings);
       
     } catch(err) {
@@ -18,7 +19,12 @@ module.exports = {
   getOne: async(req, res) => {
     try {
       const training = await TrainingDone.findByPk(req.params.id, {
-        include: ['training_origin', 'done_by']
+        include: ['by', {
+          association: 'results',
+          includes: 'exercice'
+        }, {
+          association: 'training',
+          include: 'exercices'}]
       });
       
       if (!training) {
@@ -36,11 +42,13 @@ module.exports = {
   create: async (req, res) => {
     try {
       
-      const {exoList, training_origin_id, user_id} = req.body;
+      const {userId, trainingId, duration} = req.body;
       const bodyErrors = [];
       
       // TODO la vérif si le nom est déjà pris
-      if (!exoList) bodyErrors.push('Il doit y avoir au moins un exercice');
+      if (!userId) bodyErrors.push('user id needed');
+      if (!trainingId) bodyErrors.push('training id needed');
+      if (!duration) bodyErrors.push('duration needed');
       
       if (bodyErrors.length) {
         res.status(400).json(bodyErrors);
@@ -48,9 +56,7 @@ module.exports = {
       }
       
       let newTraining = await TrainingDone.build({
-        exoList,
-        training_origin_id,
-        user_id
+        userId, trainingId, duration
       })
       
       await newTraining.save();
@@ -65,7 +71,7 @@ module.exports = {
   update: async (req, res) => {
     
     try {
-      const {exoList, training_origin_id, user_id} = req.body;
+      const {userId, trainingId, duration} = req.body;
       
       const training = await TrainingDone.findByPk(req.params.id);
       if (!training) {
@@ -73,9 +79,9 @@ module.exports = {
         return;
       }
       
-      training.exoList = exoList;
-      training.training_origin_id = training_origin_id;
-      training.user_id = user_id;
+      training.userId = userId;
+      training.trainingId = trainingId;
+      training.duration = duration;
       
       await training.save();
       res.json(training);

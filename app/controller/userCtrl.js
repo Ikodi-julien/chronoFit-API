@@ -6,13 +6,7 @@ module.exports = {
     
     try {
       const users = await User.findAll({
-        include: ['role', 'trainings_created', {
-          association: 'trainings_done',
-          include: {
-            association: 'training_origin',
-            include: 'category'
-          }
-        }]
+        include: ['role']
       });
       res.json(users);
       
@@ -25,13 +19,17 @@ module.exports = {
     try {
       
       const user = await User.findByPk(req.params.id, {
-        include: ['role', 'trainings_created', {
-          association: 'trainings_done',
-          include: {
-            association: 'training_origin',
-            include: 'category'
-          }
-        }]
+        include: ['role', {
+          association: 'createdTrainings',
+          include: ['category', 'exercices']
+            }
+          , {
+          association: 'trainingsDone',
+          include: [{
+            association: 'training',
+            include: ['category', 'exercices']
+            }]
+          }]
       });
       
       if (!user) {
@@ -51,27 +49,26 @@ module.exports = {
       
       const {pseudo, firstname, lastname, password, email} = req.body;
       const bodyErrors = [];
-      
       // TODO la vérif si le nom est déjà pris
-      if (!pseudo) bodyErrors.push('Le pseudo ne peut pas être vide');
-      if (!firstname) bodyErrors.push('Le nom ne peut pas être vide');
-      if (!lastname) bodyErrors.push('Le prénom ne peut pas être vide');
-      if (!password) bodyErrors.push('Le mot de passe ne peut pas être vide');
+      if (!pseudo) bodyErrors.push('pseudo can\'t be empty');
+      if (!firstname) bodyErrors.push('first name can\'t be empty');
+      if (!lastname) bodyErrors.push('last name can\'t be empty');
+      if (!password) bodyErrors.push('password can\'t be empty');
+      if (!email) bodyErrors.push('email can\'t be empty');
       // TODO validation d'email dans la forme et par validation d'un lien
-      if (!email) bodyErrors.push('L\'email ne peut pas être vide');
       
       if (bodyErrors.length) {
-        res.status(400).json(bodyErrors);
-        return
+        console.warn('create bodyerrors : ', bodyErrors)
+        return res.status(400).json(bodyErrors);
       }
       
+      // TODO bcrypter le password
       let newUser = await User.build({
         pseudo, 
         firstname, 
         lastname, 
         password, 
         email, 
-        status: 'disconnected', 
         role_id: 1
       })
       
@@ -95,11 +92,11 @@ module.exports = {
         return;
       }
       
-      User.pseudo = pseudo;
-      User.firstname = firstname;
-      User.lastname = lastname;
-      User.password = password;
-      User.email = email;
+      user.pseudo = pseudo;
+      user.firstname = firstname;
+      user.lastname = lastname;
+      user.password = password;
+      user.email = email;
       
       await user.save();
       res.json(user);

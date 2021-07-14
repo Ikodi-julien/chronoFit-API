@@ -5,7 +5,7 @@ module.exports = {
     
     try {
       const trainings = await Training.findAll({
-        include: ['category', 'creator', 'trainings_done']
+        include: ['category', 'creator', 'exercices']
       });
       console
       res.json(trainings);
@@ -18,8 +18,16 @@ module.exports = {
   getOne: async(req, res) => {
     try {
       const training = await Training.findByPk(req.params.id, {
-        include: ['category', 'creator', 'trainings_done']
+        include: ['category', 'creator', 'exercices', 
+        {
+          association: 'trainingsDoneChild',
+          include: {
+            association: 'results',
+            include: ['exercice']
+          }
+        }]
       });
+      
       if (!training) {
         res.status(400).json(`Training with id: ${req.params.id} not found`);
         return;
@@ -35,25 +43,21 @@ module.exports = {
   create: async (req, res) => {
     try {
       
-      const {name, exoList, isBenchmark, creator_id, category_id} = req.body;
+      const {name, isBenchmark, categoryId, userId} = req.body;
       const bodyErrors = [];
       
       // TODO la vérif si le nom est déjà pris
-      if (!name) bodyErrors.push('Le nom ne peut pas être vide');
-      if (!exoList) bodyErrors.push('Il doit y avoir au moins un exercice');
-      if (!category_id) bodyErrors.push('Une catégory doit être sélectionnée');
+      if (!name) bodyErrors.push('name can\'t be empty');
+      if (!userId) bodyErrors.push('userId is needed');
+      if (!categoryId) bodyErrors.push('Category id needed');
       
-      if (bodyErrors.length) {
-        res.status(400).json(bodyErrors);
-        return
-      }
+      if (bodyErrors.length) return res.status(400).json(bodyErrors);
       
       let newTraining = await Training.build({
         name,
-        exoList,
         isBenchmark,
-        creator_id,
-        category_id
+        userId,
+        categoryId
       })
       
       await newTraining.save();

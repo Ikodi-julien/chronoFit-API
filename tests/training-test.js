@@ -4,35 +4,36 @@ chai.use(chaiHttp);
 chai.should();
 
 module.exports = {
-  testExercice: (url) => {
-    describe("Exercice", () => {
-      let exerciceLength = 0;
-      let newExerciceId, newExerciceName, newExerciceDescription;
+  testTraining: (url) => {
+    describe("Training endpoints", () => {
+      let trainingLength = 0;
+      let newTrainingId, newTrainingName, newTrainingUserId, newTrainingCategoryId;
       
-      describe("GET /exercices", () => {
-        it("should return all categories", (done) => {
+      describe("GET /trainings", () => {
+        it("should return all trainings", (done) => {
           chai.request(url)
-          .get("/exercices")
+          .get("/trainings")
           .end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('array');
             res.body.length.should.be.greaterThan(1);
-            exerciceLength = res.body.length
+            trainingLength = res.body.length
             done()
           })
         })
       })
       
-      describe("GET /exercice/:id", () => {
-        it("should return a random exercice", (done) => {
+      describe("GET /training/:id", () => {
+        it("should return a random training", (done) => {
           chai.request(url)
-          .get(`/exercice/${Math.ceil(Math.random() * exerciceLength)}`)
+          .get(`/training/${Math.ceil(Math.random() * trainingLength)}`)
           .end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             res.body.should.have.property('id');
+            res.body.should.have.property('userId');
+            res.body.should.have.property('categoryId');
             res.body.should.have.property('name');
-            res.body.should.have.property('description');
             res.body.should.have.property('isBenchmark');
             done()
           })
@@ -40,10 +41,10 @@ module.exports = {
       })
       
             
-      describe("GET /exercice/:id doesn't exists", () => {
+      describe("GET /training/:id doesn't exists", () => {
         it("should return an error, status 400", (done) => {
           chai.request(url)
-          .get(`/exercice/${exerciceLength + 10}`)
+          .get(`/training/${trainingLength + 10}`)
           .end((err, res) => {
             res.should.have.status(400);
             done()
@@ -52,10 +53,10 @@ module.exports = {
       })
       
                   
-      describe("GET /exercice/:id where id is a letter", () => {
+      describe("GET /training/:id where id is a letter", () => {
         it("should return an error, status 400", (done) => {
           chai.request(url)
-          .get(`/exercice/test`)
+          .get(`/training/test`)
           .end((err, res) => {
             res.should.have.status(400);
             done()
@@ -64,40 +65,41 @@ module.exports = {
       })
       
             
-      describe("POST /exercice", () => {
-        it("should create an exercice", (done) => {
+      describe("POST /training", () => {
+        it("should create a training", (done) => {
           chai.request(url)
-          .post(`/exercice`)
+          .post(`/training`)
           .set('Accept', 'application/json')
           .send({
               'name': 'exo test',
-              'description': 'Un test de création d\'un exercice',
+              'userId': 2,
+              'categoryId': 2,
               'isBenchmark': false
             })
           .end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             res.body.should.have.property('id');
-            newExerciceId = res.body.id;
+            newtrainingId = res.body.id;
             res.body.should.have.property('name');
-            newExerciceName = res.body.name;
-            res.body.should.have.property('description');
-            newExerciceDescription = res.body.description;
+            newtrainingName = res.body.name;            
+            res.body.should.have.property('userId');
+            newtrainingUserId = res.body.userId;            
+            res.body.should.have.property('categoryId');
+            newtrainingCategoryId = res.body.categoryId;
             res.body.should.have.property('isBenchmark');
             done()
           })
         })
       })
       
-      describe("POST /exercice empty field", () => {
+      describe("POST /training empty field", () => {
         it("should return status 400", (done) => {
           chai.request(url)
-          .post(`/exercice`)
+          .post(`/training`)
           .set('Accept', 'application/json')
           .send({
               'name': '',
-              'description': '',
-              'isBenchmark': null
             })
           .end((err, res) => {
             res.should.have.status(400);
@@ -106,37 +108,39 @@ module.exports = {
         })
       })
 
-      describe("PATCH /exercice/:id", () => {
-        it("should update the last created exercice, return exercice with same id and not same name and description", (done) => {
+      describe("PATCH /training/:id", () => {
+        it("should update the last created training, return training with same id and not same name and description", (done) => {
           chai.request(url)
-          .patch(`/exercice/${newExerciceId}`)
+          .patch(`/training/${newtrainingId}`)
           .set('Accept', 'application/json')
           .send({
-              'name': 'exo test updated',
-              'description': 'Un test de création d\'un exercice - updated',
+              'name': 'training test updated',
+              'userId': 1,
+              'categoryId': 1,
               'isBenchmark': false
             })
           .end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             res.body.should.have.property('id');
-            chai.assert.equal(res.body.id, newExerciceId)
+            chai.assert.equal(res.body.id, newtrainingId)
+            res.body.should.have.property('userId');
+            chai.assert.equal(res.body.userId, newtrainingUserId)
+            res.body.should.have.property('categoryId');
+            chai.assert.equal(res.body.categoryId, newtrainingCategoryId)
             res.body.should.have.property('name');
-            chai.assert.notEqual(res.body.name, newExerciceName);
-            chai.assert.equal(res.body.name, 'exo test updated')
-            res.body.should.have.property('description');
-            chai.assert.notEqual(res.body.description, newExerciceDescription);
-            chai.assert.equal(res.body.description, 'Un test de création d\'un exercice - updated')
+            chai.assert.notEqual(res.body.name, newtrainingName);
+            chai.assert.equal(res.body.name, 'training test updated')
             res.body.should.have.property('isBenchmark');
             done()
           })
         })
       })
       
-      describe('DELETE /exercice/:id', () => {
-        it('should delete the newExercice', (done) => {
+      describe('DELETE /training/:id', () => {
+        it('should delete the newtraining', (done) => {
           chai.request(url)
-          .delete(`/exercice/${newExerciceId}`)
+          .delete(`/training/${newtrainingId}`)
           .end((err, res) => {
             res.should.have.status(200);
             res.should.be.an('object');
@@ -145,18 +149,16 @@ module.exports = {
         })
       })
       
-            
-      describe("GET exercice just deleted", () => {
+      describe("GET training just deleted", () => {
         it("should return an error, status 400 ", (done) => {
           chai.request(url)
-          .get(`/exercice/${newExerciceId}`)
+          .get(`/training/${newtrainingId}`)
           .end((err, res) => {
             res.should.have.status(400);
             done()
           })
         })
       })
-      
     })
   }
 }
