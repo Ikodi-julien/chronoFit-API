@@ -5,6 +5,7 @@ const trainingTemplateCtrl = require('./controller/trainingTemplateCtrl');
 const trainingDoneCtrl = require('./controller/trainingDoneCtrl');
 const userCtrl = require('./controller/userCtrl');
 const exerciceCtrl = require('./controller/exerciceCtrl');
+const resultCtrl = require('./controller/resultCtrl');
 
 /*------------------------------*/
 const router= express.Router();
@@ -15,12 +16,13 @@ router.get('/', (req, res) => {
   res.sendFile(filePath);
 })
 
-/* CATEGORY */
-router.get('/categories', categoryCtrl.getAll);
-router.get('/category/:id', categoryCtrl.getOne);
-router.post('/category', categoryCtrl.create);
-router.patch('/category/:id', categoryCtrl.update);
-router.delete('/category/:id', categoryCtrl.delete);
+/* CATEGORY user can only read categories*/
+router.get('/categories', categoryCtrl.getAll);// tested
+router.get('/category/:id', categoryCtrl.getOne);// tested
+// For now, 
+// router.post('/category', categoryCtrl.create);
+// router.patch('/category/:id', categoryCtrl.update);
+// router.delete('/category/:id', categoryCtrl.delete);
 
 /* TRAINING */
 router.get('/trainings', trainingTemplateCtrl.getAll);
@@ -48,11 +50,11 @@ router.patch('/trainingDone/:id', trainingDoneCtrl.update);
 router.delete('/trainingDone/:id', trainingDoneCtrl.delete);
 
 /* EXERCICE */
-router.get('/exercices', exerciceCtrl.getAll);
-router.get('/exercice/:id', exerciceCtrl.getOne);
-router.post('/exercice', exerciceCtrl.create);
-router.patch('/exercice/:id', exerciceCtrl.update);
-router.delete('/exercice/:id', exerciceCtrl.delete);
+router.get('/exercices', exerciceCtrl.getAll); // tested
+router.get('/exercice/:id', exerciceCtrl.getOne); //tested
+router.post('/exercice', exerciceCtrl.create); //tested
+router.patch('/exercice/:id', exerciceCtrl.update); //tested
+router.delete('/exercice/:id', exerciceCtrl.delete); //tested
 
 /* ROLE not available with a request*/
 /* RESULT */

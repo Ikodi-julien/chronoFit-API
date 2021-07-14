@@ -18,3 +18,5 @@ app.use(router);
 /*------------------------*/
 const PORT = process.env.PORT;
 app.listen(PORT || 5000, () => console.log(`http://localhost:${PORT || 5000}`))
+
+module.exports = app;

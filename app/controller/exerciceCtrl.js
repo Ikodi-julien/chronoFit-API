@@ -17,11 +17,14 @@ module.exports = {
   getOne: async (req, res) => {
 
     const id = req.params.id;
-
+    const regexp = /[0-9]+/;
+    
+    if (!regexp.test(id)) return res.status(400).json('Exercice id need to be a number');
+    
     try {
       const exercice = await Exercice.findByPk(id);
 
-      exercice ? res.json(Exercice) : res.status(400).send(`Can't find Exercice with id: ${id}`);
+      exercice ? res.json(exercice) : res.status(400).send(`Can't find Exercice with id: ${id}`);
 
     } catch(err) {
       console.trace(err);
@@ -32,7 +35,7 @@ module.exports = {
   create: (req, res) => {
     const {name, description, isBenchmark} = req.body;
 
-    if (!name || !description || !isBenchmark) {
+    if (!name || !description || typeof isBenchmark !== 'boolean') {
       res.status(400).json('"name", "description" or "isBenchmark" can\'t be empty');
       return
     }
@@ -81,7 +84,8 @@ module.exports = {
     try {
       const exercice = await Exercice.findByPk(req.params.id);
       await exercice.destroy();
-      res.json('Exercice destroyed');
+      return res.json('Exercice destroyed');
+      
     } catch(err) {
       console.trace(err);
       res.status(500).json(err.toString());
