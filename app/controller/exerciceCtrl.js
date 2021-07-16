@@ -2,6 +2,8 @@ const {Exercice} = require('../models');
 
 module.exports = {
   getAll: async (req, res) => {
+    // #swagger.tags = ['Exercices']
+    // #swagger.summary = 'Get all exercices'
 
     try {
       const exercices = await Exercice.findAll();
@@ -15,6 +17,8 @@ module.exports = {
   },
 
   getOne: async (req, res) => {
+    // #swagger.tags = ['Exercices']
+    // #swagger.summary = 'Get one exercice'
 
     const id = req.params.id;
     
@@ -30,6 +34,17 @@ module.exports = {
   },
 
   create: (req, res) => {
+    // #swagger.tags = ['Exercices']
+    // #swagger.summary = 'Creates one exercice'
+    /*  #swagger.parameters['obj_exercice'] = {
+    in: 'body',
+    description: 'JSON object needed to create an exercice',
+    schema: {
+        $name: 'exercice name',
+        $description: 'How to execute the exercice, its context',
+        $isBenchmark: 'Is the exercice to be remembered in stats',
+      }
+    } */
     const {name, description, isBenchmark} = req.body;
 
     if (!name || !description || typeof isBenchmark !== 'boolean') {
@@ -44,7 +59,7 @@ module.exports = {
     })
     .save()
     .then(data => {
-      res.json(data);
+      res.status(200).json(data);
     })
     .catch(err => {
       console.trace(err);
@@ -53,7 +68,17 @@ module.exports = {
   },
 
   update: async (req, res) => {
-
+    // #swagger.tags = ['Exercices']
+    // #swagger.summary = 'Updates one exercice'
+    /*  #swagger.parameters['obj_exercice'] = {
+    in: 'body',
+    description: 'JSON object needed to update an exercice, not all properties are needed',
+    schema: {
+        $name: 'exercice name',
+        $description: 'How to execute the exercice, its context',
+        $isBenchmark: 'Is the exercice to be remembered in stats',
+    }
+    } */
     try {
       const {id} = req.params;
       const exercice = await Exercice.findByPk(id);
@@ -78,6 +103,8 @@ module.exports = {
   },
 
   delete: async (req, res) => {
+    // #swagger.tags = ['Exercices']
+    // #swagger.summary = 'Deletes one exercice'
     try {
       const exercice = await Exercice.findByPk(req.params.id);
       await exercice.destroy();

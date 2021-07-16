@@ -2,6 +2,7 @@ const {Training} =require('../models');
 
 module.exports = {
   getAll: async (req, res) => {
+    // #swagger.tags = ['Trainings']
     
     try {
       const trainings = await Training.findAll({
@@ -15,7 +16,10 @@ module.exports = {
       res.status(500).json(err.toString())
     }
   },
+  
   getOne: async(req, res) => {
+    // #swagger.tags = ['Trainings']
+    // #swagger.summary = 'Get one training'
     try {
       const training = await Training.findByPk(req.params.id, {
         include: ['category', 'creator', 'exercices', 
@@ -41,6 +45,17 @@ module.exports = {
   },
   
   create: async (req, res) => {
+    // #swagger.tags = ['Trainings']
+    /*  #swagger.parameters['obj'] = {
+    in: 'body',
+    description: 'JSON needed to update a result, all properties are mandatory',
+    schema: {
+        $name: "training name",
+        $categoryId: "1",
+        $userId: "1",
+        $isBenchmark: "boolean",
+      }
+    } */
     try {
       
       const {name, isBenchmark, categoryId, userId} = req.body;
@@ -70,8 +85,17 @@ module.exports = {
   },
   
   update: async (req, res) => {
-    
-    try {
+    // #swagger.tags = ['Trainings']
+    /*  #swagger.parameters['obj'] = {
+    in: 'body',
+    description: 'JSON needed to update a result, not all properties are mandatory',
+    schema: {
+        $name: "training name",
+        $categoryId: "1",
+        $userId: "1",
+        $isBenchmark: "boolean",
+      }
+    } */    try {
       const {name, exoList, isBenchmark, creator_id, category_id} = req.body;
       
       const training = await Training.findByPk(req.params.id);
@@ -96,6 +120,7 @@ module.exports = {
   },
   
   delete: async (req, res) => {
+    // #swagger.tags = ['Trainings']
     
     try {
       

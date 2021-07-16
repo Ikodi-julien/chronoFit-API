@@ -2,6 +2,8 @@ const {Result} = require('../models');
 
 module.exports = {
   getAll: async (req, res) => {
+    // #swagger.tags = ['Results']
+    // #swagger.summary = 'Get all results'
 
     try {
       const results = await Result.findAll({
@@ -17,6 +19,8 @@ module.exports = {
   },
 
   getOne: async (req, res) => {
+    // #swagger.tags = ['Results']
+    // #swagger.summary = 'Get one result'
 
     const id = req.params.id;
 
@@ -39,6 +43,20 @@ module.exports = {
   },
 
   create: (req, res) => {
+    // #swagger.tags = ['Results']
+    // #swagger.summary = 'Creates one result'
+    /*  #swagger.parameters['obj_result'] = {
+    in: 'body',
+    description: 'JSON object needed to create a result, all properties are mandatory',
+    schema: {
+        $userId: "1",
+        $exerciceId: "1",
+        $trainingDoneId: "1",
+        $duration: "100", 
+        $weight: "20", 
+        $reps: "10",
+    }
+    } */    
     const {userId, exerciceId, trainingDoneId, duration, weight, reps } = req.body;
 
     if (!userId || !exerciceId || !trainingDoneId || !duration || !weight || !reps ) {
@@ -51,7 +69,7 @@ module.exports = {
     })
     .save()
     .then(data => {
-      res.json(data);
+      res.status(200).json(data);
     })
     .catch(err => {
       console.trace(err);
@@ -60,7 +78,20 @@ module.exports = {
   },
 
   update: async (req, res) => {
-
+    // #swagger.tags = ['Results']
+    // #swagger.summary = 'Updates one result'
+    /*  #swagger.parameters['obj_result'] = {
+    in: 'body',
+    description: 'JSON object needed to update a result, not all properties are needed',
+    schema: {
+        $userId: "1",
+        $exerciceId: "1",
+        $trainingDoneId: "1",
+        $duration: "100", 
+        $weight: "20", 
+        $reps: "10",
+    }
+    } */
     try {
       const {id} = req.params;
       const result = await Result.findByPk(id);
@@ -79,7 +110,7 @@ module.exports = {
       if (weight) result.weight = weight;
       if (reps) result.reps = reps;
       await result.save();
-      res.json(result);
+      res.status(200).json(result);
 
     } catch(err) {
       console.trace(err);
@@ -88,6 +119,8 @@ module.exports = {
   },
 
   delete: async (req, res) => {
+    // #swagger.tags = ['Results']
+    // #swagger.summary = 'Deletes one result'
     try {
       const result = await Result.findByPk(req.params.id);
       await result.destroy();

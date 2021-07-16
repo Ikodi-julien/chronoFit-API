@@ -3,6 +3,7 @@ const {User} =require('../models');
 // TODO jeton d'authentification en middleware
 module.exports = {
   getAll: async (req, res) => {
+    // #swagger.tags = ['Users']
     
     try {
       const users = await User.findAll({
@@ -16,6 +17,7 @@ module.exports = {
     }
   },
   getOne: async(req, res) => {
+    // #swagger.tags = ['Users']
     try {
       
       const user = await User.findByPk(req.params.id, {
@@ -45,6 +47,7 @@ module.exports = {
   },
   
   create: async (req, res) => {
+    // #swagger.tags = ['Users']
     try {
       
       const {pseudo, firstname, lastname, password, email} = req.body;
@@ -82,6 +85,7 @@ module.exports = {
   },
   
   update: async (req, res) => {
+    // #swagger.tags = ['Users']
     
     try {
       const {pseudo, firstname, lastname, password, email} = req.body;
@@ -108,6 +112,7 @@ module.exports = {
   },
   
   delete: async (req, res) => {
+    // #swagger.tags = ['Users']
     
     try {
       

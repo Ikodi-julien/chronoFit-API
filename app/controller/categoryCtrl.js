@@ -2,7 +2,8 @@ const {Category} = require('../models');
 
 module.exports = {
   getAll: async (req, res) => {
-    
+    // #swagger.tags = ['Categories']
+    // #swagger.summary = 'Get all categories of training'
     try {
       const categories = await Category.findAll({
         include:{
@@ -19,6 +20,8 @@ module.exports = {
   },
   
   getOne: async (req, res) => {
+    // #swagger.tags = ['Categories']
+    // #swagger.summary = 'Get one category of training'
     
     const catId = req.params.id;
     console.log('catId', catId);
@@ -39,6 +42,9 @@ module.exports = {
   },
   
   create: (req, res) => {
+    // #swagger.tags = ['Categories']
+    // #swagger.summary = 'Add a category of training'
+
     const name = req.body.name;
     
     if (!name) {
@@ -60,6 +66,8 @@ module.exports = {
   },
   
   update: async (req, res) => {
+    // #swagger.tags = ['Categories']
+    // #swagger.summary = 'Updates a category of training'
     
     try {
       const catId = req.params.id;
@@ -83,6 +91,8 @@ module.exports = {
   },
 
   delete: async (req, res) => {
+    // #swagger.tags = ['Categories']
+    // #swagger.summary = 'Deletes a category of training'
     try {
       const category = await Category.findByPk(req.params.id);
       await category.destroy();
@@ -92,22 +102,4 @@ module.exports = {
       res.status(500).json(err.toString());
     }
   },
-  
-  // createOrModify: async (req, res) => {
-  //   try {
-  //     let category;
-  //     if (req.paramas.id) {
-  //       category = await Category.findByPk(req.params.id);
-  //     }
-  //     if (category) {
-  //       await categoryCtrl.modify(req, res);
-  //       return;
-  //     }
-  //     await categoryCtrl.create(req, res);
-      
-  //   } catch(err) {
-  //     console.trace(err);
-  //     res.status(500).json(err.toString());
-  //   }
-  // },
 }

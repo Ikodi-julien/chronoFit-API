@@ -2,6 +2,7 @@ const {TrainingDone} =require('../models');
 
 module.exports = {
   getAll: async (req, res) => {
+    // #swagger.tags = ['Trainings Done']
     
     try {
       const trainings = await TrainingDone.findAll({
@@ -17,6 +18,7 @@ module.exports = {
     }
   },
   getOne: async(req, res) => {
+    // #swagger.tags = ['Trainings Done']
     try {
       const training = await TrainingDone.findByPk(req.params.id, {
         include: ['by', {
@@ -40,6 +42,7 @@ module.exports = {
   },
   
   create: async (req, res) => {
+    // #swagger.tags = ['Trainings Done']
     try {
       
       const {userId, trainingId, duration} = req.body;
@@ -69,6 +72,7 @@ module.exports = {
   },
   
   update: async (req, res) => {
+    // #swagger.tags = ['Trainings Done']
     
     try {
       const {userId, trainingId, duration} = req.body;
@@ -93,6 +97,7 @@ module.exports = {
   },
   
   delete: async (req, res) => {
+    // #swagger.tags = ['Trainings Done']
     
     try {
       
