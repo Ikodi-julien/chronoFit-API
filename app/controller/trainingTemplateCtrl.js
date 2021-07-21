@@ -6,7 +6,7 @@ module.exports = {
     
     try {
       const trainings = await Training.findAll({
-        include: ['category', 'creator', 'exercices']
+        include: ['category', 'creator', 'rounds']
       });
       console
       res.json(trainings);
@@ -22,8 +22,10 @@ module.exports = {
     // #swagger.summary = 'Get one training'
     try {
       const training = await Training.findByPk(req.params.id, {
-        include: ['category', 'creator', 'exercices', 
-        {
+        include: ['category', 'creator', {
+          association: 'rounds', 
+          include: ['exercices']
+        }, {
           association: 'trainingsDoneChild',
           include: {
             association: 'results',

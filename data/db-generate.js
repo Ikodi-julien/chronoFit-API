@@ -1,6 +1,7 @@
 const {
   Category,
   Training, 
+  Round,
   Exercice, 
   Role, 
   User, 
@@ -25,11 +26,11 @@ const exercicesJson = require('./exercices.json');
   try {
     await sequelize.sync({ force: true })
 
-    // CATEGORY
+    // CREATE CATEGORY
     const categoriesSequelize = await Category.bulkCreate(categories);
-    // ROLE
-    const rolesSequelize = await Role.bulkCreate(roles);
-    // EXERCICE
+    // CREATE ROLE
+    await Role.bulkCreate(roles);
+    // CREATE EXERCICE
     const exercices = [];
     for (let index = 0; index < 20; index++) {
       const newExercice = await Exercice.create({
@@ -39,7 +40,7 @@ const exercicesJson = require('./exercices.json');
       })
       exercices.push(newExercice);
     }
-    // USER
+    // CREATE USER
     const users = [];
     for (let index = 0; index < 5; index++) {
       const newUser = await User.create({
@@ -57,9 +58,9 @@ const exercicesJson = require('./exercices.json');
       const authenticated = await Role.findOne({where: {id: 3}});
       await authenticated.addUser(user)
     }
-    // TRAINING
+    // CREATE TRAINING
     const trainings = [];
-    for (let index = 0; index <5; index++) {
+    for (let index = 0; index < 5; index++) {
       const newTraining = await Training.create({
         name: faker.lorem.word(),
         isBenchmark: false,
@@ -74,7 +75,7 @@ const exercicesJson = require('./exercices.json');
       const user = await User.findOne({where: {id: Math.floor(Math.random() * users.length + 1) }});
       await training.setCreator(user);
     }
-    // TRAINING-DONE
+    // CREATE TRAINING-DONE
     const trainingsDone = [];
     for (let index = 0; index< 10; index++) {
       const newTrainingDone = await TrainingDone.create({
@@ -86,19 +87,27 @@ const exercicesJson = require('./exercices.json');
     const trainingsDoneFull = [];
     for (const trainingDone of trainingsDone) {
       const user = await User.findOne({where: {id: Math.floor(Math.random() * users.length + 1) }});
-      await trainingDone.setUser(user);
+      await trainingDone.setBy(user);
       
       const training = await Training.findOne({where: {id : Math.floor(Math.random() * trainings.length + 1)}});
       await trainingDone.setTraining(training);
       
       trainingsDoneFull.push(trainingDone);
     }
-    // TRAINING-HAS-EXERCICE
-    for (const training of trainings) {
-      for (let index = 0; index < 5; index++) {
-        await training.addExercice(Math.floor(Math.random() * exercices.length + 1))
+    // CREATE ROUNDS
+    for (let index = 0; index < 15; index++) {
+      const newRound = await Round.create({
+        iteration: Math.ceil(Math.random() * 3),
+        duration: Math.floor(Math.random() * 1000),
+      })
+      // ADD EXERCICES IN ROUND
+      for (let index = 0; index < 4; index++) {
+        await newRound.addExercice(Math.floor(Math.random() * exercices.length + 1))
       }
+    // ADD ROUND IN TRAININGS
+      trainings[Math.floor(Math.random() * trainings.length)].addRound(newRound);
     }
+
     // RESULT
     // Un resultat pour chaque exercice de chaque training-done
     for (const trainingDone of trainingsDoneFull) {
@@ -107,10 +116,18 @@ const exercicesJson = require('./exercices.json');
         where: {
           id: trainingDone.trainingId
         },
-        include: 'exercices'
+        include: {
+          association: 'rounds',
+          include: 'exercices'
+        }
       });
       // Récupérer les exos du training d'origine
-      const exos = originTraining.exercices;
+      const exos = [];
+      for (const round of originTraining.rounds) {
+        for (const exo of round.exercices) {
+          exos.push(exo)
+        }
+      }
       // Pour chaque exo du training d'origine, créer un Result
       for (const exo of exos) {
         const newResult = await Result.create({

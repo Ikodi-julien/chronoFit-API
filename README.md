@@ -57,6 +57,14 @@ Afin de me chronométrer
 | Utilisateur | Avoir et enregistrer le temps passé sur chaque exercice, le chrono suivant se déclenche sur action utilisateur ou fin de chrono d'exo précédent |
 | Utilisateur | Avoir et enregistrer le temps passé pour chaque groupe d'exercice |
 
+## Versions déployées
+v0.1:
+API: les endpoints renvoient des données.
+React: Les composants Training sont connectés, on peut afficher les trainings en BdD.
+
+v0.2:
+?
+
 ## MCD
 
 A ce stade, les différentes entités identifiées :
@@ -78,7 +86,7 @@ Les rôles :
 Le _authenticated_ peut lire mais pas écrire dans la base de données.
 L'_admin_ quand à lui est un coach sans restriction sur l'auteur.
 
-![mocodo de chronofit-react](./docs/mocodo/MCD.svg)
+![mocodo de chronofit-react](./docs/mocodo/MCD.png)
 
 ## FAQ
 ### Comment créer ou modifier un entrainement ?

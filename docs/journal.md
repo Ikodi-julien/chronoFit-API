@@ -2,6 +2,29 @@
 
 ## Journal de suivi des réalisations, 1ère entrée le 23/04/2021
 
+### Le 21/07/2021
+
+20h30 - 21h30
+Il me faut ajouter une table "Option" au MCD afin de gérer les options d'un exercie (durée, reps, poids, détails)
+
+Ajout au MCD =>
+Création modèle sequelize =>
+Création association sequelize =>
+Modification du script de création DB => 
+
+### Le 20/07/2021
+
+J'arrive à travailler de 2 à 4h par jour, à côté c'est les vacances et la fin des travaux dans la maison.
+
+Aujourd'hui, j'ajoute la table 'Round' avec les tables d'association 'Training-has-round' et 'Round-has-training' dans le MCD.
+
+Je change aussi le MCD avec un whimsical car la mise en forme auto de Mocodoonline ne donne pas de resultat satisfaisant. (Me semble bien plus simple et compréhensible sur whimsical).
+
+Modifications dans sequelize => ok
+Modification du script de création de la base de données => ok
+
+Affichage de la page "Training" avec le composant "TrainingManager" qui récupère la liste des trainings disponibles en BDD et permet avec un select de récupérer et afficher le training sélectionné dans le composant "Training", y compris les différents "Round" et les "Exercice" dans les rounds. Cool !
+
 ### Le 13/07/2021
 
 Le script de création de la base de données semble fonctionner. J'ai fait rapido un scrapper en python pour récupérer les définitions d'exercice d'un site. 
