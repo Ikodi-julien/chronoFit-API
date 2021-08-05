@@ -24,8 +24,16 @@ module.exports = {
       const training = await Training.findByPk(req.params.id, {
         include: ['category', 'creator', {
           association: 'rounds', 
-          include: ['exercices']
-        }, {
+          include: {
+            association: 'exercices',
+            include: {
+              association: 'options',
+              where: {
+                trainingId: req.params.id,
+              },
+            },
+          },
+          }, {
           association: 'trainingsDoneChild',
           include: {
             association: 'results',

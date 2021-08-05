@@ -22,8 +22,8 @@ router.get('/', (req, res) => {
 router.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 /* ------------- CATEGORY user can only read categories*/
-router.get('/categories', categoryCtrl.getAll);
-router.get('/category/:id', checkSlugId, categoryCtrl.getOne);
+// router.get('/categories', categoryCtrl.getAll);
+// router.get('/category/:id', checkSlugId, categoryCtrl.getOne);
 
 /*------------------------- TRAINING */
 router.get('/trainings', trainingTemplateCtrl.getAll);
@@ -33,37 +33,37 @@ router.patch('/training/:id', checkSlugId, trainingTemplateCtrl.update);
 router.delete('/training/:id', checkSlugId, trainingTemplateCtrl.delete);
 
 /* USER */
-router.get('/users', userCtrl.getAll);
-router.get('/user/:id', checkSlugId, userCtrl.getOne);
-router.post('/user', userCtrl.create);
-// TODO a middleware for admin access only
-router.patch('/user/:id', checkSlugId, userCtrl.update);
-router.delete('/user/:id', checkSlugId, userCtrl.delete);
-// TODO a middleware for "me" access
+// router.get('/users', userCtrl.getAll);
+// router.get('/user/:id', checkSlugId, userCtrl.getOne);
+// router.post('/user', userCtrl.create);
+// // TODO a middleware for admin access only
+// router.patch('/user/:id', checkSlugId, userCtrl.update);
+// router.delete('/user/:id', checkSlugId, userCtrl.delete);
+// // TODO a middleware for "me" access
 // router.patch('/me', userCtrl.updateMe);
 // router.delete('/me', userCtrl.deleteMe);
 
 /* TRAINING DONE */
-router.get('/trainingsDone', trainingDoneCtrl.getAll);
-router.get('/trainingDone/:id', checkSlugId, trainingDoneCtrl.getOne);
-router.post('/trainingDone', trainingDoneCtrl.create);
-router.patch('/trainingDone/:id', checkSlugId, trainingDoneCtrl.update);
-router.delete('/trainingDone/:id', checkSlugId, trainingDoneCtrl.delete);
+// router.get('/trainingsDone', trainingDoneCtrl.getAll);
+// router.get('/trainingDone/:id', checkSlugId, trainingDoneCtrl.getOne);
+// router.post('/trainingDone', trainingDoneCtrl.create);
+// router.patch('/trainingDone/:id', checkSlugId, trainingDoneCtrl.update);
+// router.delete('/trainingDone/:id', checkSlugId, trainingDoneCtrl.delete);
 
-/* EXERCICE */
-router.get('/exercices', exerciceCtrl.getAll);
-router.get('/exercice/:id', checkSlugId, exerciceCtrl.getOne);
-router.post('/exercice', exerciceCtrl.create);
-router.patch('/exercice/:id', checkSlugId, exerciceCtrl.update);
-router.delete('/exercice/:id', checkSlugId, exerciceCtrl.delete);
+// /* EXERCICE */
+// router.get('/exercices', exerciceCtrl.getAll);
+// router.get('/exercice/:id', checkSlugId, exerciceCtrl.getOne);
+// router.post('/exercice', exerciceCtrl.create);
+// router.patch('/exercice/:id', checkSlugId, exerciceCtrl.update);
+// router.delete('/exercice/:id', checkSlugId, exerciceCtrl.delete);
 
-/* ROLE not available with a request*/
-/* RESULT */
-router.get('/results', resultCtrl.getAll);
-router.get('/result/:id', checkSlugId, resultCtrl.getOne);
-router.post('/result', resultCtrl.create);
-router.patch('/result/:id', checkSlugId, resultCtrl.update);
-router.delete('/result/:id', checkSlugId, resultCtrl.delete);
+// /* ROLE not available with a request*/
+// /* RESULT */
+// router.get('/results', resultCtrl.getAll);
+// router.get('/result/:id', checkSlugId, resultCtrl.getOne);
+// router.post('/result', resultCtrl.create);
+// router.patch('/result/:id', checkSlugId, resultCtrl.update);
+// router.delete('/result/:id', checkSlugId, resultCtrl.delete);
 
 /*------------------------------*/
 module.exports = router;

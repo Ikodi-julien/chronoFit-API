@@ -2,6 +2,7 @@ const Category = require('./category');
 const Training = require('./training');
 const Round = require('./round');
 const Exercice = require('./exercice');
+const ExoOption = require('./exoOption')
 const Role = require('./role');
 const User = require('./user');
 const TrainingDone = require('./trainingDone');
@@ -47,6 +48,24 @@ Exercice.hasMany(Result, {
 Result.belongsTo(Exercice, {
   foreignKey: 'exerciceId',
   as: 'exercice'
+})
+/*----------------------------------*/
+Exercice.hasMany(ExoOption, {
+  foreignKey: 'exerciceId',
+  as: 'options'
+})
+ExoOption.belongsTo(Exercice, {
+  foreignKey: 'exerciceId',
+  as: 'exercice'
+})
+/*----------------------------------*/
+Training.hasMany(ExoOption, {
+  foreignKey: 'trainingId',
+  as: 'exooptions'
+})
+ExoOption.belongsTo(Training, {
+  foreignKey: 'trainingId',
+  as: 'training'
 })
 /*--------------------------------*/
 
@@ -113,6 +132,7 @@ module.exports = {
   Training, 
   Round,
   Exercice, 
+  ExoOption,
   Role, 
   User, 
   TrainingDone,

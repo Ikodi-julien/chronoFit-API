@@ -3,6 +3,7 @@ const {
   Training, 
   Round,
   Exercice, 
+  ExoOption,
   Role, 
   User, 
   TrainingDone,
@@ -106,6 +107,29 @@ const exercicesJson = require('./exercices.json');
       }
     // ADD ROUND IN TRAININGS
       trainings[Math.floor(Math.random() * trainings.length)].addRound(newRound);
+    }
+
+    // CREATE EXOOPTION
+    // Une option pour chaque exercice de chaque training
+    for ( const training of await Training.findAll(
+      {
+        include: {
+          association: 'rounds',
+          include: ['exercices']
+        }
+      }
+    )) {
+      for ( const round of training.rounds) {
+        for (const exercice of round.exercices) {
+          await exercice.addOption(await ExoOption.create({
+            trainingId: training.id,
+            iteration: (Math.floor((Math.random() + 1) * 5)),
+            duration: Math.floor(Math.random() * 100),
+            reps: (Math.floor(Math.random() * 2 + 1)) * 5,
+            weight: (Math.floor(Math.random() * 20 + 2)) * 5,
+          }))
+        }
+      }
     }
 
     // RESULT

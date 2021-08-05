@@ -58,20 +58,26 @@ Afin de me chronométrer
 | Utilisateur | Avoir et enregistrer le temps passé pour chaque groupe d'exercice |
 
 ## Versions déployées
-v0.1:
-API: les endpoints renvoient des données.
-React: Les composants Training sont connectés, on peut afficher les trainings en BdD.
+v1:
+API: les endpoints renvoient des données, notamment les trainings benchmarks, seulement read par le client (create ok pour les resultats uniquement).
+React: La vue Training benchmark est fonctionnelle, on peut afficher un trainings benchmark et y ajouter un exercice, modifier les options et déplacer les exercices, suivre l'entrainement et enregistrer son résultat en BdD.
 
-v0.2:
-?
+v2:
+API: Module d'authentification fonctionnel,
+React: La vue Training custom est fonctionnelle, on peut CRUD un entrainement, le suivre et enregistrer le résultat en localstorage
+
+V3:
+Ajout des vues de statistiques
 
 ## MCD
 
 A ce stade, les différentes entités identifiées :
 * training,
-* training-has-exercice (table d'association many to many),
+* round,
+* round-has-exercice (table d'association many to many),
 * training-done,
 * exercice,
+* exooption,
 * result,
 * category,
 * user,
