@@ -7,13 +7,12 @@ Les entrainements sont, pour la première version, une liste d'exercices à réa
 Chaque exercice a :
 * Un nom,
 * Une description, 
-* Une durée,
+* Un nombre de séries,
 * Un nombre de répétition (facultatif),
+* Une durée,
 * Une charge (facultative),
 
-Les entrainements enregistrés dans l'API sont considérés 'benchmark' dans le sens ou ils peuvent être comparés, en terme de durée globale, de nombre de répétitions et / ou de charge.
-
-Certains exercices de base dit 'benchmark' également sont comparés en terme de nombre de répétitions et charge moyenne sur une période donnée.
+Les entrainements enregistrés dans l'API sont considérés 'benchmark' dans le sens ou ils peuvent être comparés, en terme de durée globale, de nombre de répétitions et / ou de charge. Ce sont pour l'instant des trainings non modifiables correspondant aux standards du Crossfit (les "Girls").
 
 ## User Cases
 
@@ -60,14 +59,13 @@ Afin de me chronométrer
 ## Versions déployées
 v1:
 API: les endpoints renvoient des données, notamment les trainings benchmarks, seulement read par le client (create ok pour les resultats uniquement).
-React: La vue Training benchmark est fonctionnelle, on peut afficher un trainings benchmark et y ajouter un exercice, modifier les options et déplacer les exercices, suivre l'entrainement et enregistrer son résultat en BdD.
+React: 
+* La vue Training benchmark est fonctionnelle, on peut afficher un trainings benchmark et suivre l'entrainement.
+* La vue Création d'un training est fonctionnelle, on peut afficher un trainings créé par nos soins, suivre l'entrainement et enregistrer son résultat en localstorage.
 
-v2:
-API: Module d'authentification fonctionnel,
-React: La vue Training custom est fonctionnelle, on peut CRUD un entrainement, le suivre et enregistrer le résultat en localstorage
-
-V3:
-Ajout des vues de statistiques
+v2 dans le turfu :
+API: Module d'authentification fonctionnel, on peut enregistrer ses résultats aux "Girls" si authentifié,
+React: Accès aux vues de statistiques pour les utilisateurs authentifiés.
 
 ## MCD
 
@@ -98,9 +96,9 @@ L'_admin_ quand à lui est un coach sans restriction sur l'auteur.
 ### Comment créer ou modifier un entrainement ?
 L'utilisateur a accès à une vue permettant de :
 * Créer un entrainement vide (ou modifier une entrainement existant et l'enregistrer sous un autre nom),
-* Créer un exercice à partir de la liste des exos 'benchmark' ou un nouvel exercice en précisant ses paramétres (durée, nb de reps, charge, description + nom pour les exos non-benchmark),
+* Créer un nouvel exercice en précisant ses paramétres (durée, nb de séries, nb de reps, charge, description + nom pour les exos non-benchmark),
 * Ajouter cet exercice et les suivants dans la liste d'exo du training,
-* Enregistrer l'entrainement (en local ou DB selon les droits),
+* Enregistrer l'entrainement en local,
 
 ### Comment suivre un entrainement ?
 Depuis la vue qui permet de créer, modifier ou charger un entrainement, la time-line est remplie avec les exercices sélectionnés.
@@ -108,11 +106,7 @@ On valide, ce qui affiche la vue permettant de suivre l'enchainement des exercic
 
 ### Comment enregistrer ses performances ?
 Selon le type d'exercice, le nombre de reps effectué et la charge ont pu être modifiés.
-Ces informations ainsi que le temps total de l'entrainement peuvent être enregistrés à la fin de l'entrainement (donné soit par la fin du dernier exercice chronométré, soit par le fait de quitter la vue d'entrainement par la croix).
-On crée alors un enregitrement 'training_done' qui contient :
-* Le nom du sportif,
-* Une référence au training d'origine, 
-* Une liste d'exercice (contient les infos décrites ci-dessus) au format json.
+Ces informations ainsi que le temps total de l'entrainement peuvent être enregistrés à la fin de l'entrainement.
 
 ### Comment comparer les perfs aux entrainements faits ? Comment visualiser les améliorations ?
 Une vue personnalisée affiche les statistiques (à définir plus finement avec de la data), qui contiendrait entre autre :

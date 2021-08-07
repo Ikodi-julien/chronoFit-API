@@ -2,7 +2,47 @@
 
 ## Journal de suivi des réalisations, 1ère entrée le 23/04/2021
 
-### Le 05/08 (11h - 13h30 / 14h30 - 17h / 18h - )
+### Le 07/08 (11h - 13h15)
+
+Fait un peu de JSDoc dans trainingServices => ok
+Créer la logique de lecture d'un chrono  dans le composant TimeDisplay => ok
+  * Le chrono se met en route et s'arrête avec l'action prévue => ok
+  * Si le chrono n'est pas en pause et qu'il reste au moins un exercice, passe à la suite =>
+
+Lire le training =>
+Pouvoir modifier le nombre de reps et le poids d'un exercice =>
+Faire une modale pour valider la fin du training =>
+Enregistrer le résultat =>
+Faire un beau chrono round qui tourne avec le temps =>
+Afficher les résultats à un training (créer une vue "Résultats" avec un select contenant les trainings)=>
+
+### Le 06/08 (09h30 - 13h15 / 14h15 - 16h / 19h - 20h15)
+
+Créer la vue ReadTraining (suite) :
+* TrainingDétails => ok
+* ExoDetails => ok
+* ExoPlayingDetails => ok
+* ReadControl => ok
+* ReadTime => ok
+
+Créer readTrainingReducer => ok
+ 
+Connecter les components au store :
+* ReadTrainingView => ok
+* TrainingDétails => ok
+* ExoDetails => ok
+* ExoPlayingDetails => ok
+* TimeDisplay => ok
+
+Afficher le localTraining => ok
+
+Une bonne chose de faite, pour la suite je projette de :
+* créer les actions maker pour avancer et reculer d'un exercice => ok
+  * On peut afficher l'exo suivant ou précédent avec le contrôle prévu => ok
+  * Pas d'erreur en début et fin de liste => ok
+  * Corriger la fonction getTimeline() => ok
+
+### Le 05/08 (11h - 13h30 / 14h30 - 17h / 18h - 20h30)
 
 Relier au state la modification de l'ordre des exercices dans un autre round => Problème "Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node." ? => ok après une bonne nuit de sommeil (merci les issues github)
 
@@ -30,31 +70,6 @@ Ajouter un bouton dans trainingManager puis afficher la ReadTrainingView => ok
 
 Créer et afficher avec props en dur :
 * TrainingDétails => en cours...
-
-A faire la prochaine fois :
-* ExoDetails =>
-* ExoPlayingDetails =>
-* ReadControl =>
-* ReadTime =>
-
-Créer un Reducer pour :
-* Les props d'affichage readTrainingViewReducer ? =>
-* Les props liées aux chronos chronosReducer ? =>
- 
-Connecter les components au store :
-* ReadTrainingView => 
-* TrainingDétails =>
-* ExoDetails =>
-* ExoPlayingDetails =>
-* ReadControl (Avancer ou reculer d'un ou plusieurs exo)=>
-* ReadTime =>
-
-Lire un exo (lire un chrono) =>
-Lire le training =>
-Pouvoir modifier le nombre de reps et le poids d'un exercice =>
-Faire une modale pour valider la fin du training =>
-Enregistrer le résultat =>
-Afficher les résultats à un training (créer une vue "Résultats" avec un select contenant les trainings)=>
 
 ### Le 04/08 (12h - 13h30 / 14h30 -)
 
