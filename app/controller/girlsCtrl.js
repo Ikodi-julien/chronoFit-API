@@ -24,7 +24,7 @@ const girlsCtrl = {
     // #swagger.summary = 'Get one result'
     const id = req.params.id;
     
-    const girl = require(path.resolve(`public/data/girl-${id}.js`))
+    const girl = require(path.resolve(`public/data/${id}.js`))
     res.json(girl)
   },
 }

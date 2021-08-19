@@ -12,27 +12,41 @@ Faire le login dans l'app react =>
 Faire la logique "Coaching" =>
 Enregistrer les résultats aux trainings des coachs en BDD =>
 
+### Le 19/08 (8h30 - 10h00 / 16h - 18h)
+
+Fix bug navigation et la cohérence des actions => ok
+Faire 5 FT de plus => ok
+* Lire les trainings dans l'app react => ok
+Faire un AMRAP => ok
+Fixer bug avec GlobalCountdown, endTraining si dans les 5 premières secondes => ok
+* Lire le training dans l'app react => ok
+Faire 2 ou 3 AMRAP de plus => ok
+* Lire les trainings dans l'app react => ok
+Faire des EMOM => ok
+Gérer le tri avec TypeSelector => 
+
+Faire 10 girls de plus =>
+Faire 10 girls de plus =>
+Faire 10 girls de plus =>
+Faire les max reps =>
+
+Faire quelques containers pour alléger les gros composants =>
+Mettre loader sur typeSelector =>
+Mettre loader sur GirlsView après selection d'un WOD =>
+Faire un module de gestion infos utilisateur =>
+
+Tests de l'app méthodique (1 jours)=>
+
+Deploy (1 jour)=>
+
+_*FIN de la V1.0 espérée avant fin aout*_
+
 ### Le 18/08 (16h30 - 20h15)
 
 Intégrer la 'GirlsView' maquettes => ok
 Afficher les girls, la version pour GirlsView => ok
 Faire un premier fichier de girls utilisable pour mise en BDD, un for time :
 * Afficher et lire dans 'ReadTraining' => ok
-* Gérer la navigation et la cohérence des actions =>
-Faire 2 ou 3 FT de plus =>
-* Lire les trainings dans l'app react =>
-Faire un AMRAP =>
-* Lire le training dans l'app react =>
-Faire 2 ou 3 AMRAP de plus =>
-* Lire les trainings dans l'app react =>
-Faire des EMOM =>
-Faire les max reps =>
-
-Tests de l'app (2 jours)=>
-
-Deploy (1 jour)=>
-
-_*FIN de la V1.0 espérée autour du 20/08*_
 
 ### Le 17/08 (9h15 - 10h00)
 
