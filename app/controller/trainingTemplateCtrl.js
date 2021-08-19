@@ -1,4 +1,5 @@
 const {Training} =require('../models');
+const { options } = require('../models/category');
 
 module.exports = {
   getAll: async (req, res) => {
@@ -8,7 +9,6 @@ module.exports = {
       const trainings = await Training.findAll({
         include: ['category', 'creator', 'rounds']
       });
-      console
       res.json(trainings);
       
     } catch(err) {

@@ -4,6 +4,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('../swagger-output.json');
 const categoryCtrl = require('./controller/categoryCtrl');
 const trainingTemplateCtrl = require('./controller/trainingTemplateCtrl');
+const girlsCtrl = require('./controller/girlsCtrl');
 const trainingDoneCtrl = require('./controller/trainingDoneCtrl');
 const userCtrl = require('./controller/userCtrl');
 const exerciceCtrl = require('./controller/exerciceCtrl');
@@ -31,6 +32,10 @@ router.get('/training/:id', checkSlugId, trainingTemplateCtrl.getOne);
 router.post('/training', trainingTemplateCtrl.create);
 router.patch('/training/:id', checkSlugId, trainingTemplateCtrl.update);
 router.delete('/training/:id', checkSlugId, trainingTemplateCtrl.delete);
+
+/*------------------------- GIRLS */
+router.get('/girls', girlsCtrl.getAll);
+router.get('/girl/:id', girlsCtrl.getOne);
 
 /* USER */
 // router.get('/users', userCtrl.getAll);
