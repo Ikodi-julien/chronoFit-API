@@ -1,45 +1,45 @@
 module.exports = {
-  name: 'Candy',
+  name: 'Gwen',
   type: 'ft',
   timecap: '',
   rounds: [
     {
-      iteration: '5',
+      iteration: 1,
       duration: 0,
       exercices: [
         {
-          name: 'Pull Ups',
+          name: 'Clean & Jerks (unbroken)',
           description: '',
           options: [
             {
-              iteration: 1,
+              iteration: 15,
               duration: 0,
               weight: 0,
-              reps: '20'
+              reps: 0
             }
           ]
         },
         {
-          name: 'Push Ups',
+          name: 'Clean & Jerks (unbroken)',
           description: '',
           options: [
             {
-              iteration: 1,
+              iteration: 12,
               duration: 0,
               weight: 0,
-              reps: '40'
+              reps: 0
             }
           ]
         },
         {
-          name: 'Air Squats',
+          name: 'Clean & Jerks (unbroken)',
           description: '',
           options: [
             {
-              iteration: 1,
+              iteration: 9,
               duration: 0,
               weight: 0,
-              reps: '60'
+              reps: 0
             }
           ]
         },

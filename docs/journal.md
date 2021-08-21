@@ -12,6 +12,37 @@ Faire le login dans l'app react =>
 Faire la logique "Coaching" =>
 Enregistrer les résultats aux trainings des coachs en BDD =>
 
+### Le 21/08 (8h15 - 11h30)
+
+Faire 10 dernières girls => 
+Gérer les erreurs:
+* app react =>
+* app express =>
+* Les erreurs prennent en compte les loaders =>
+Faire un module de gestion infos utilisateur =>
+* Les infos et erreurs sont affichées aussi =>
+Tests de l'app méthodique, scénarios (1 jours)=>
+
+Deploy (1 jour)=>
+
+_*FIN de la V1.0 espérée le 24/08*_
+
+### Le 20/08 (8h00 - 10h00 / 13h00 - 13h30 / 16h45 - 17h45 / 21h45 - 22h45)
+
+Fix bug sortablejs sur android => ok (mauvaise utilisation de .sort((a, b) => a - b))
+Faire que le mode réduit d'un round soit encore plus réduit => finalement non, on reste comme ça
+Voir pour que la croix d'un exoform valide le contenu => ok
+Faire quelques containers pour alléger les gros composants:
+* RoundMenuContainer => ok
+* Tous chrono et countdown => ok
+Fix bug le son de fin de countdown => ok
+Mettre synthèse vocale au début de chaque nouvel exercice, supprimer à la fin du countdown => ok
+Mettre un bouton pour couper la voix => ok
+Voir si toujours besoin de IsApi dans Round => oui
+Faire 10 girls =>  ok
+Mettre loader sur typeSelector => ok
+Mettre loader sur GirlsView après selection d'un WOD => ok
+
 ### Le 19/08 (8h30 - 10h00 / 16h - 18h)
 
 Fix bug navigation et la cohérence des actions => ok
@@ -23,23 +54,8 @@ Fixer bug avec GlobalCountdown, endTraining si dans les 5 premières secondes =>
 Faire 2 ou 3 AMRAP de plus => ok
 * Lire les trainings dans l'app react => ok
 Faire des EMOM => ok
-Gérer le tri avec TypeSelector => 
-
-Faire 10 girls de plus =>
-Faire 10 girls de plus =>
-Faire 10 girls de plus =>
-Faire les max reps =>
-
-Faire quelques containers pour alléger les gros composants =>
-Mettre loader sur typeSelector =>
-Mettre loader sur GirlsView après selection d'un WOD =>
-Faire un module de gestion infos utilisateur =>
-
-Tests de l'app méthodique (1 jours)=>
-
-Deploy (1 jour)=>
-
-_*FIN de la V1.0 espérée avant fin aout*_
+Aller jusqu'à la moitié des Girls en DB => ok
+Gérer le tri avec TypeSelector => ok
 
 ### Le 18/08 (16h30 - 20h15)
 

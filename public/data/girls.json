@@ -4,7 +4,7 @@
     "maleId": "girl-0m",
     "femaleId": "girl-0f",
     "title": "Amanda",
-    "type": "",
+    "type": "ft",
     "subtitle": "9-7-5 réps FT :\n",
     "exercices": [
             "Muscle Ups",
@@ -23,7 +23,7 @@
     "maleId": "girl-1m",
     "femaleId": "girl-1f",
     "title": "Amanda .45",
-    "type": "",
+    "type": "ft",
     "subtitle": "13-11-9-7-5 réps FT :\n",
     "exercices": [
             "Muscle Ups",
@@ -37,7 +37,7 @@
     "maleId": "girl-2m",
     "femaleId": "",
     "title": "Angie",
-    "type": "",
+    "type": "ft",
     "subtitle": "FT :\n",
     "exercices": [
             "100 Pull Ups",
@@ -49,7 +49,7 @@
     "target": [
             "Débutant : 24/28 minutes",
             "Intermédiaire : 19/23 minutes",
-            "Avancé : 18/22 minutes",
+            "Avancé : 14/18 minutes",
             "Expert : moins de 14 minutes"
         ]
     },
@@ -58,7 +58,7 @@
     "maleId": "girl-3m",
     "femaleId": "",
     "title": "Upside Down Angie",
-    "type": "",
+    "type": "ft",
     "subtitle": "FT :\n",
     "exercices": [
             "100 Squats",
@@ -74,7 +74,7 @@
     "maleId": "girl-4m",
     "femaleId": "",
     "title": "Annie",
-    "type": "",
+    "type": "ft",
     "subtitle": "50-40-30-20-10 réps FT :\n",
     "exercices": [
             "Double Unders",
@@ -93,7 +93,7 @@
     "maleId": "girl-5m",
     "femaleId": "",
     "title": "Barbara",
-    "type": "",
+    "type": "ft",
     "subtitle": "5 rounds FT :",
     "exercices": [
             " (3 minutes de repos entre chaque round)",
@@ -115,7 +115,7 @@
     "maleId": "girl-6m",
     "femaleId": "",
     "title": "Candy",
-    "type": "",
+    "type": "ft",
     "subtitle": "5 rounds FT :\n",
     "exercices": [
             "20 Pull Ups",
@@ -135,7 +135,7 @@
     "maleId": "girl-7m",
     "femaleId": "",
     "title": "Chelsea",
-    "type": "",
+    "type": "emom",
     "subtitle": "EMOM pendant 30 minutes :\n",
     "exercices": [
             "5 Pull Ups",
@@ -150,7 +150,7 @@
     "maleId": "girl-8m",
     "femaleId": "",
     "title": "Christine",
-    "type": "",
+    "type": "ft",
     "subtitle": "3 rounds FT :\n",
     "exercices": [
             "500 m de rameur",
@@ -165,7 +165,7 @@
     "maleId": "girl-9m",
     "femaleId": "",
     "title": "Cindy",
-    "type": "",
+    "type": "amrap",
     "subtitle": "AMRAP pendant 20 min :\n",
     "exercices": [
             "5 Pull Ups",
@@ -185,7 +185,7 @@
     "maleId": "girl-10m",
     "femaleId": "",
     "title": "Cindy XXX",
-    "type": "",
+    "type": "amrap",
     "subtitle": "AMRAP pendant 20 minutes :\n",
     "exercices": [
             "10 Pull Ups",
@@ -212,7 +212,7 @@
     "maleId": "girl-11m",
     "femaleId": "girl-11f",
     "title": "Hard Cindy",
-    "type": "",
+    "type": "amrap",
     "subtitle": "AMRAP pendant 20 minutes :\n",
     "exercices": [
             "5 Weighted Pull Ups (15 / 10 kg)",
@@ -225,9 +225,9 @@
   {
     "id": 12,
     "maleId": "girl-12m",
-    "femaleId": "girl-12f",
+    "femaleId": "",
     "title": "Row Cindy Row",
-    "type": "",
+    "type": "amrap",
     "subtitle": "AMRAP pendant 20 minutes :\n",
     "exercices": [
             "5 Pull Ups",
@@ -243,7 +243,7 @@
     "maleId": "girl-13m",
     "femaleId": "girl-13f",
     "title": "Diane",
-    "type": "",
+    "type": "ft",
     "subtitle": "21-15-9 réps FT :\n",
     "exercices": [
             "Deadlift (100 / 70 kg)",
@@ -262,7 +262,7 @@
     "maleId": "girl-14m",
     "femaleId": "girl-14f",
     "title": "Roaming Diane",
-    "type": "",
+    "type": "ft",
     "subtitle": "21-15-9 réps FT :\n",
     "exercices": [
             "Deadlifts (100 / 70 kg)",
@@ -276,7 +276,7 @@
     "maleId": "girl-15m",
     "femaleId": "girl-15f",
     "title": "Time Priority Diane",
-    "type": "",
+    "type": "maxreps",
     "subtitle": "Max réps en 4:30 minutes :\n",
     "exercices": [
             "60 secondes de Deadlifts (100 / 70 kg)",
@@ -294,7 +294,7 @@
     "maleId": "girl-16m",
     "femaleId": "girl-16f",
     "title": "Elizabeth",
-    "type": "",
+    "type": "ft",
     "subtitle": "21-15-9 réps FT :\n",
     "exercices": [
             "Squat Cleans (60 / 45 kg)",
@@ -313,7 +313,7 @@
     "maleId": "girl-17m",
     "femaleId": "girl-17f",
     "title": "Eva",
-    "type": "",
+    "type": "ft",
     "subtitle": "5 rounds FT :\n",
     "exercices": [
             "800 m de course",
@@ -333,7 +333,7 @@
     "maleId": "girl-18m",
     "femaleId": "girl-18f",
     "title": "Fran",
-    "type": "",
+    "type": "ft",
     "subtitle": "21-15-9 réps FT :\n",
     "exercices": [
             "Thrusters (45 / 30 kg)",
@@ -347,7 +347,7 @@
     "maleId": "girl-19m",
     "femaleId": "girl-19f",
     "title": "Fractured Fran",
-    "type": "",
+    "type": "ft",
     "subtitle": "5 rounds FT :\n",
     "exercices": [
             "9 Thrusters (45 / 30 kg)",
@@ -361,7 +361,7 @@
     "maleId": "girl-20m",
     "femaleId": "girl-20f",
     "title": "Heavy Fran",
-    "type": "",
+    "type": "ft",
     "subtitle": "15-12-9 réps FT :\n",
     "exercices": [
             "Thrusters (60 / 45 kg)",
@@ -380,7 +380,7 @@
     "maleId": "girl-21m",
     "femaleId": "girl-21f",
     "title": "Frelen",
-    "type": "",
+    "type": "ft",
     "subtitle": "5 rounds FT :\n",
     "exercices": [
             "800 m de course",
@@ -395,7 +395,7 @@
     "maleId": "girl-22m",
     "femaleId": "girl-22f",
     "title": "Grace",
-    "type": "",
+    "type": "ft",
     "subtitle": "FT :\n",
     "exercices": [
             "30 Clean & Jerks (60 / 45 kg)"
@@ -413,7 +413,7 @@
     "maleId": "girl-23m",
     "femaleId": "girl-23f",
     "title": "Double Grace",
-    "type": "",
+    "type": "ft",
     "subtitle": "60 réps FT :\n",
     "exercices": [
             "Clean & Jerk (60 / 45 kg)"
@@ -424,9 +424,9 @@
   {
     "id": 24,
     "maleId": "girl-24m",
-    "femaleId": "girl-24f",
+    "femaleId": "",
     "title": "Gwen",
-    "type": "",
+    "type": "maxreps",
     "subtitle": "15-12-9 réps FL :\n",
     "exercices": [
             "Clean & Jerks (unbroken)"
@@ -439,7 +439,7 @@
     "maleId": "girl-25m",
     "femaleId": "girl-25f",
     "title": "Helen",
-    "type": "",
+    "type": "ft",
     "subtitle": "3 rounds FT :",
     "exercices": [
             "400 m de Course",
@@ -459,7 +459,7 @@
     "maleId": "girl-26m",
     "femaleId": "girl-26f",
     "title": "Double Helen",
-    "type": "",
+    "type": "ft",
     "subtitle": "3 rounds FT :\n",
     "exercices": [
             "800 m de course",
@@ -474,7 +474,7 @@
     "maleId": "girl-27m",
     "femaleId": "girl-27f",
     "title": "Isabel",
-    "type": "",
+    "type": "ft",
     "subtitle": "FT :\n",
     "exercices": [
             "30 Snatchs (60 / 45 kg)"
@@ -492,7 +492,7 @@
     "maleId": "girl-28m",
     "femaleId": "girl-28f",
     "title": "Jackie",
-    "type": "",
+    "type": "ft",
     "subtitle": "FT :\n",
     "exercices": [
             "1000 m en rameur",
@@ -527,7 +527,7 @@
     "maleId": "girl-30m",
     "femaleId": "girl-30f",
     "title": "Karen",
-    "type": "",
+    "type": "ft",
     "subtitle": "FT :\n",
     "exercices": [
             "150 Wall Ball (9 / 6 kg – 2 / 1.75 m)"
@@ -545,7 +545,7 @@
     "maleId": "girl-31m",
     "femaleId": "girl-31f",
     "title": "Kelly",
-    "type": "",
+    "type": "ft",
     "subtitle": "5 rounds FT :\n",
     "exercices": [
             "400 m de course",
@@ -563,9 +563,9 @@
   {
     "id": 32,
     "maleId": "girl-32m",
-    "femaleId": "girl-32f",
+    "femaleId": "",
     "title": "Linda",
-    "type": "",
+    "type": "ft",
     "subtitle": "10-9-8…3-2-1 réps FT :\n",
     "exercices": [
             "Deadlift (1.5x BW)",
@@ -583,9 +583,9 @@
   {
     "id": 33,
     "maleId": "girl-33m",
-    "femaleId": "girl-33f",
+    "femaleId": "",
     "title": "Lynne",
-    "type": "",
+    "type": "maxreps",
     "subtitle": "5 rounds de réps max :\n",
     "exercices": [
             "Bench Press (BW)",
@@ -602,9 +602,9 @@
   {
     "id": 34,
     "maleId": "girl-34m",
-    "femaleId": "girl-34f",
+    "femaleId": "",
     "title": "Maggie",
-    "type": "",
+    "type": "ft",
     "subtitle": "5 rounds FT :\n",
     "exercices": [
             "20 Handstand Push Ups",
@@ -622,9 +622,9 @@
   {
     "id": 35,
     "maleId": "girl-35m",
-    "femaleId": "girl-35f",
+    "femaleId": "",
     "title": "Mary",
-    "type": "",
+    "type": "amrap",
     "subtitle": "AMRAP pendant 20 min :\n",
     "exercices": [
             "5 Handstand Push Ups",
@@ -642,9 +642,9 @@
   {
     "id": 36,
     "maleId": "girl-36m",
-    "femaleId": "girl-36f",
+    "femaleId": "",
     "title": "Mary XXX",
-    "type": "",
+    "type": "amrap",
     "subtitle": "AMRAP pendant 20 minutes :\n",
     "exercices": [
             "10 Handstand Push Ups",
@@ -659,7 +659,7 @@
             "25 Handstand Push Ups",
             "50 Pistol Squats (en alternant les jambes)",
             "75 Pull Ups",
-            "60 Handstand Push Ups",
+            "30 Handstand Push Ups",
             "60 Pistol Squats (en alternant les jambes)",
             "90 Pull Ups"
         ],
@@ -669,9 +669,9 @@
   {
     "id": 37,
     "maleId": "girl-37m",
-    "femaleId": "girl-37f",
+    "femaleId": "",
     "title": "Special Mary",
-    "type": "",
+    "type": "ft",
     "subtitle": "FT :\n",
     "exercices": [
             "5 Strict Handstand Push Ups",
@@ -696,9 +696,9 @@
   {
     "id": 38,
     "maleId": "girl-38m",
-    "femaleId": "girl-38f",
+    "femaleId": "",
     "title": "Easy Mary",
-    "type": "",
+    "type": "amrap",
     "subtitle": "AMRAP pendant 20 minutes :\n",
     "exercices": [
             "5 Handstand Push Ups",
@@ -713,7 +713,7 @@
     "maleId": "girl-39m",
     "femaleId": "girl-39f",
     "title": "Nancy",
-    "type": "",
+    "type": "ft",
     "subtitle": "5 rounds FT :\n",
     "exercices": [
             "400 m de Course",
@@ -732,7 +732,7 @@
     "maleId": "girl-40m",
     "femaleId": "girl-40f",
     "title": "Nasty Girls",
-    "type": "",
+    "type": "ft",
     "subtitle": "3 rounds FT :\n",
     "exercices": [
             "50 Squats",
@@ -747,7 +747,7 @@
     "maleId": "girl-41m",
     "femaleId": "girl-41f",
     "title": "Nasty Girls V2",
-    "type": "",
+    "type": "ft",
     "subtitle": "3 rounds FT :\n",
     "exercices": [
             "50 Pistol Squats (en alternant les jambes)",
@@ -760,9 +760,9 @@
   {
     "id": 42,
     "maleId": "girl-42m",
-    "femaleId": "girl-42f",
+    "femaleId": "",
     "title": "Nicole",
-    "type": "",
+    "type": "amrap",
     "subtitle": "AMRAP pendant 20 minutes :\n",
     "exercices": [
             "400 m de course",

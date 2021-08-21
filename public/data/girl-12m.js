@@ -1,10 +1,10 @@
 module.exports = {
-  name: 'Candy',
-  type: 'ft',
-  timecap: '',
+  name: 'Cindy',
+  type: 'amrap',
+  timecap: 20,
   rounds: [
     {
-      iteration: '5',
+      iteration: '30',
       duration: 0,
       exercices: [
         {
@@ -15,7 +15,7 @@ module.exports = {
               iteration: 1,
               duration: 0,
               weight: 0,
-              reps: '20'
+              reps: '5'
             }
           ]
         },
@@ -27,7 +27,7 @@ module.exports = {
               iteration: 1,
               duration: 0,
               weight: 0,
-              reps: '40'
+              reps: '10'
             }
           ]
         },
@@ -39,7 +39,19 @@ module.exports = {
               iteration: 1,
               duration: 0,
               weight: 0,
-              reps: '60'
+              reps: '15'
+            }
+          ]
+        },
+        {
+          name: '20 Calories Row',
+          description: '',
+          options: [
+            {
+              iteration: 1,
+              duration: 0,
+              weight: 0,
+              reps: 1
             }
           ]
         },

@@ -1,12 +1,24 @@
 module.exports = {
-  name: 'Candy',
-  type: 'ft',
-  timecap: '',
+  name: 'Easy Mary',
+  type: 'amrap',
+  timecap: 20,
   rounds: [
     {
-      iteration: '5',
+      iteration: '30',
       duration: 0,
       exercices: [
+        {
+          name: 'Handstand Push Ups',
+          description: '',
+          options: [
+            {
+              iteration: 1,
+              duration: 0,
+              weight: 0,
+              reps: '5'
+            }
+          ]
+        },
         {
           name: 'Pull Ups',
           description: '',
@@ -15,19 +27,7 @@ module.exports = {
               iteration: 1,
               duration: 0,
               weight: 0,
-              reps: '20'
-            }
-          ]
-        },
-        {
-          name: 'Push Ups',
-          description: '',
-          options: [
-            {
-              iteration: 1,
-              duration: 0,
-              weight: 0,
-              reps: '40'
+              reps: '10'
             }
           ]
         },
@@ -39,7 +39,7 @@ module.exports = {
               iteration: 1,
               duration: 0,
               weight: 0,
-              reps: '60'
+              reps: '25'
             }
           ]
         },

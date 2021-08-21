@@ -1,45 +1,45 @@
 module.exports = {
-  name: 'Candy',
+  name: 'Nasty Girls V2',
   type: 'ft',
   timecap: '',
   rounds: [
     {
-      iteration: '5',
+      iteration: 3,
       duration: 0,
       exercices: [
         {
-          name: 'Pull Ups',
+          name: 'Pistol Squats',
           description: '',
           options: [
             {
               iteration: 1,
               duration: 0,
               weight: 0,
-              reps: '20'
+              reps: 50
             }
           ]
         },
         {
-          name: 'Push Ups',
+          name: 'Muscle Ups',
           description: '',
           options: [
             {
               iteration: 1,
               duration: 0,
               weight: 0,
-              reps: '40'
+              reps: 7
             }
           ]
         },
         {
-          name: 'Air Squats',
+          name: 'Hang Power Cleans',
           description: '',
           options: [
             {
               iteration: 1,
               duration: 0,
-              weight: 0,
-              reps: '60'
+              weight: 80,
+              reps: 10
             }
           ]
         },

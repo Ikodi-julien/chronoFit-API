@@ -1,45 +1,33 @@
 module.exports = {
-  name: 'Candy',
+  name: 'Nicole',
   type: 'ft',
-  timecap: '',
+  timecap: 20,
   rounds: [
     {
-      iteration: '5',
+      iteration: 10,
       duration: 0,
       exercices: [
         {
-          name: 'Pull Ups',
+          name: '400 m de course',
           description: '',
           options: [
             {
               iteration: 1,
               duration: 0,
               weight: 0,
-              reps: '20'
+              reps: 0
             }
           ]
         },
         {
-          name: 'Push Ups',
+          name: 'Pull Ups (unbroken max)',
           description: '',
           options: [
             {
               iteration: 1,
               duration: 0,
               weight: 0,
-              reps: '40'
-            }
-          ]
-        },
-        {
-          name: 'Air Squats',
-          description: '',
-          options: [
-            {
-              iteration: 1,
-              duration: 0,
-              weight: 0,
-              reps: '60'
+              reps: 0
             }
           ]
         },

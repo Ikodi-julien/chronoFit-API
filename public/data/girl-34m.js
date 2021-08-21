@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'Candy',
+  name: 'Maggie',
   type: 'ft',
   timecap: '',
   rounds: [
@@ -8,7 +8,7 @@ module.exports = {
       duration: 0,
       exercices: [
         {
-          name: 'Pull Ups',
+          name: 'Handstand Push Ups',
           description: '',
           options: [
             {
@@ -20,7 +20,7 @@ module.exports = {
           ]
         },
         {
-          name: 'Push Ups',
+          name: 'Pull Ups',
           description: '',
           options: [
             {
@@ -32,7 +32,7 @@ module.exports = {
           ]
         },
         {
-          name: 'Air Squats',
+          name: 'Pistol Squats',
           description: '',
           options: [
             {

@@ -1,12 +1,36 @@
 module.exports = {
-  name: 'Candy',
+  name: 'Running Jackie',
   type: 'ft',
   timecap: '',
   rounds: [
     {
-      iteration: '5',
+      iteration: 1,
       duration: 0,
       exercices: [
+        {
+          name: "800 m de course",
+          description: '',
+          options: [
+            {
+              iteration: 1,
+              duration: 0,
+              weight: 0,
+              reps: 0
+            }
+          ]
+        },
+        {
+          name: 'Thrusters',
+          description: '',
+          options: [
+            {
+              iteration: 1,
+              duration: 0,
+              weight: 20,
+              reps: 50
+            }
+          ]
+        },
         {
           name: 'Pull Ups',
           description: '',
@@ -15,31 +39,7 @@ module.exports = {
               iteration: 1,
               duration: 0,
               weight: 0,
-              reps: '20'
-            }
-          ]
-        },
-        {
-          name: 'Push Ups',
-          description: '',
-          options: [
-            {
-              iteration: 1,
-              duration: 0,
-              weight: 0,
-              reps: '40'
-            }
-          ]
-        },
-        {
-          name: 'Air Squats',
-          description: '',
-          options: [
-            {
-              iteration: 1,
-              duration: 0,
-              weight: 0,
-              reps: '60'
+              reps: 30
             }
           ]
         },
