@@ -2,13 +2,13 @@ const express = require('express');
 const path = require('path');
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('../swagger-output.json');
-const categoryCtrl = require('./controller/categoryCtrl');
-const trainingTemplateCtrl = require('./controller/trainingTemplateCtrl');
+// const categoryCtrl = require('./controller/categoryCtrl');
+// const trainingTemplateCtrl = require('./controller/trainingTemplateCtrl');
 const girlsCtrl = require('./controller/girlsCtrl');
-const trainingDoneCtrl = require('./controller/trainingDoneCtrl');
-const userCtrl = require('./controller/userCtrl');
-const exerciceCtrl = require('./controller/exerciceCtrl');
-const resultCtrl = require('./controller/resultCtrl');
+// const trainingDoneCtrl = require('./controller/trainingDoneCtrl');
+// const userCtrl = require('./controller/userCtrl');
+// const exerciceCtrl = require('./controller/exerciceCtrl');
+// const resultCtrl = require('./controller/resultCtrl');
 const checkSlugId = require('./middlewares/checkSlugId');
 
 /*------------------------------*/
@@ -27,11 +27,11 @@ router.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // router.get('/category/:id', checkSlugId, categoryCtrl.getOne);
 
 /*------------------------- TRAINING */
-router.get('/trainings', trainingTemplateCtrl.getAll);
-router.get('/training/:id', checkSlugId, trainingTemplateCtrl.getOne);
-router.post('/training', trainingTemplateCtrl.create);
-router.patch('/training/:id', checkSlugId, trainingTemplateCtrl.update);
-router.delete('/training/:id', checkSlugId, trainingTemplateCtrl.delete);
+// router.get('/trainings', trainingTemplateCtrl.getAll);
+// router.get('/training/:id', checkSlugId, trainingTemplateCtrl.getOne);
+// router.post('/training', trainingTemplateCtrl.create);
+// router.patch('/training/:id', checkSlugId, trainingTemplateCtrl.update);
+// router.delete('/training/:id', checkSlugId, trainingTemplateCtrl.delete);
 
 /*------------------------- GIRLS */
 router.get('/girls', girlsCtrl.getAll);
