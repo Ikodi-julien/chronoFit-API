@@ -16,9 +16,21 @@
 
 * Fix bug, le timecap ne se réaffiche pas au chargement d'un training dans CTMOptions => ok
 * Fin des tests de scénario => ok
-* /*----------------*/
+* *----------------*
+* Création branche master/deploy_v0 app react => ok
+* Création branche master/deploy_v0 app express => ok
+* *----------------*
 * 
 * Deploy (1 jour)=>
+* * Passer l'app Express chez AWS :
+*   * Cloner le repo =>
+*   * teste avec Postman =>
+*   * DNS chez Gandi (chronofitapi.ikodi.eu)=>
+*   * test Postman =>
+* * Passer l'app react chez AWS :
+*   * Cloner le repo =>
+*   * DNS chez Gandi (chronofit.ikodi.eu)=>
+*   * Test de l'app =>
 * 
 * Post sur linkedin =>
 
