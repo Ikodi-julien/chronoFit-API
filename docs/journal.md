@@ -12,15 +12,33 @@
 * Faire la logique "Coaching" =>
 * Enregistrer les résultats aux trainings des coachs en BDD =>
 
-### Le 23/08 (08h45 - 11h30)
+### Le 24/08 (8h45 - 12h30)
+
+* Paramétrer pm2 de façon satisfaisante => ok (un module.export dans l'api faisait planter pm2, debug pas facile...)
+* Test de l'app => ok
+* Hot fix, améliorer le positionnement de la synthèse vocale, faire démarrage après 0.2s mais pas de lecture si changement d'exo avant => ok
+* Déployement ok !
+
+### Le 23/08 (08h45 - 11h30 / 13h30 - 14h30)
 
 * Fix bug, le timecap ne se réaffiche pas au chargement d'un training dans CTMOptions => ok
 * Fin des tests de scénario => ok
-* /*----------------*/
 * 
 * Deploy (1 jour)=>
-* 
-* Post sur linkedin =>
+* * Passer l'app Express chez AWS :
+*   * Cloner la branche deploy_v0 du repo => ok
+*   * npm i => ok
+*   * paramétrer nginx comme reverse-proxy => ok (ne pas oublier le fichier de def upstream)
+*   * DNS chez Gandi (chronofitapi.ikodi.eu)=> ok
+*   * https avec certbot => ok
+*   * test Postman /girls => ok
+*   * Modifier la page html à "/", retirer les endpoints inusités => ok
+* * Passer l'app react chez AWS :
+*   * DNS chez Gandi (chronofit.ikodi.eu)=> ok
+*   * Faire un build et faire une app express dédiée => ok
+*   * Créer un repo et le cloner chez AWS => ok
+*   * Paramétrer nginx (upstream + conf) => ok
+*   * https avec certbot => ok
 
 ### Le 22/08 (08h15 - 13h30 / 18h15 - 19h)
 
