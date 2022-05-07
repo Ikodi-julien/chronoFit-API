@@ -3,32 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories":
-  {
+  "directories": {
     "doc": "docs"
   },
-  "scripts":
-  {
+  "scripts": {
     "test": "mocha ./tests/index.js",
     "swagger-update": "node swagger.js",
     "generate-db": "node ./data/db-generate.js",
-    "start": "node-dev index.js"
+    "start": "node index.js"
   },
-  "repository":
-  {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/Ikodi-julien/chronoFit-API.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs":
-  {
+  "bugs": {
     "url": "https://github.com/Ikodi-julien/chronoFit-API/issues"
   },
   "homepage": "https://github.com/Ikodi-julien/chronoFit-API#readme",
-  "dependencies":
-  {
+  "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "chai": "^4.3.4",
